@@ -12,6 +12,8 @@
   "author": "Brett Cunningham II",
   "license": "ISC",
   "dependencies": {
+    "@material-ui/core": "^4.4.3",
+    "@material-ui/icons": "^4.4.3",
     "axios": "^0.18.0",
     "cors": "^2.8.5",
     "express": "^4.13.4",
