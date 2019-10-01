@@ -52,3 +52,11 @@ h1 {
 #niceHouse {
   background-image: url('../img/sourceImages/jason-briscoe-UV81E0oXXWQ-unsplash.jpg')
 }
+
+#gridImg {
+  background-image: url('../img/sourceImages/gridImg.jpg');
+}
+
+#sofa {
+  background-image: url('../img/sourceImages/sofa.jpg')
+}
