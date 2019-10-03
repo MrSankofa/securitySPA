@@ -7,7 +7,7 @@ const Header = (props) => {
   const useStyles = makeStyles(theme => ({
     header: {
       height: '670px',
-      backgroundImage: 'url(./img/sourceImages/brettNeighborhood.jpg)',
+      backgroundImage: 'url(./img/sourceImages/neighborhood.jpg)',
       backgroundRepeat: 'round',
       width: '100%',
       borderRadius: '0 0 0 85px',
@@ -27,7 +27,8 @@ const Header = (props) => {
     },
     headerContent: {
       zIndex: '2',
-      marginLeft: '10%'
+      marginLeft: '10%',
+      position: 'relative'
     },
     mainTitle: {
       color: 'white',
@@ -61,11 +62,20 @@ const Header = (props) => {
     whiteBkg: {
       backgroundColor: '#fefefe'
     },
+    overlay: {
+      backgroundColor: 'black',
+      position: 'absolute',
+      opacity: '0.5',
+      width: '100%',
+      height: '670px',
+      borderRadius: '0 0 0 85px',
+    }
   }));
   const classes = useStyles();
   return (
     <div className={classes.whiteBkg}>
       <div className={classes.header}>
+        <div className={classes.overlay}></div>
         <div className={classes.headerContent}>
           <div className={classes.mainNavWrapper}>
 
