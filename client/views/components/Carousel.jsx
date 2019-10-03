@@ -10,7 +10,6 @@ const Carousel = (props) => {
       overflow: 'hidden',
       whiteSpace: 'nowrap',
       textAlign: 'center',
-      backgroundColor: '#fefefe',
       width: '686px'
     },
     reviewWrapper: {
@@ -19,17 +18,17 @@ const Carousel = (props) => {
       width: '100%',
       height: '100%',
       textAlign: 'center',
-      backgroundColor: '#fefefe',
       margin: '0 auto'
     },
     review: {
       width: '686px',
-      display: 'inline-block'
+      display: 'inline-block',
+      fontSize: '23px',
+      color: '#8e8e8e'
     },
     avatarSlider: {
       width: '100px',
       margin: '0 auto',
-      backgroundColor: '#fefefe',
       overflow: 'hidden',
     },
     avatarWrapper: {
@@ -48,7 +47,7 @@ const Carousel = (props) => {
 
   useEffect(() => {
     if (1) {
-      setReviews(8);
+      setReviews(7);
     }
   });
 
