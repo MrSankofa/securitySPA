@@ -5,7 +5,7 @@ const Carousel = (props) => {
   const useStyles = makeStyles(theme => ({
     reviewCarousel: {
       position: 'relative',
-      margin: '0 auto',
+      margin: '8% auto',
       height: 'auto',
       overflow: 'hidden',
       whiteSpace: 'nowrap',
@@ -135,6 +135,7 @@ const Carousel = (props) => {
           transform: `translateX(${translateAvatarValue}px)`,
           transition: 'transform ease-out 0.2s',
         }}>
+          <img className={classes.avatar} src='./img/sourceImages/avatarPhoto.jpg' height="100px" width="100px" />
           <img className={classes.avatar} src='./img/sourceImages/avatarPhoto.jpg' height="100px" width="100px" />
           <img className={classes.avatar} src='./img/sourceImages/avatarPhoto.jpg' height="100px" width="100px" />
           <img className={classes.avatar} src='./img/sourceImages/avatarPhoto.jpg' height="100px" width="100px" />

@@ -5,13 +5,16 @@ import Paper from '@material-ui/core/Paper';
 
 const Contact = (props) => {
   const useStyles = makeStyles(theme => ({
-    contactForm: {
-
+    contactWrapper: {
+      width: '100%',
+      height: '680px',
+      backgroundImage: 'url(\'./img/sourceImages/contactUs.jpg\')',
+      backgroundRepeat: 'round',
     },
   }));
   const classes = useStyles();
   return (
-    <div className={classes.contactForm}>
+    <div className={classes.contactWrapper}>
 
     </div>
   )
