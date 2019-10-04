@@ -17,16 +17,18 @@ menu{
   top: 0px;
   opacity: 1;
   transition: opacity 1s ease;
+  padding: 10px;
 }
 .makeStyles-mainNavWrapper-3{
-  position: fixed;
   width: 100%;
   opacity: 1;
-  transition: width 0.3s ease;
+  transition: width 2s ease;
+  padding: 10px;
 }
 .makeStyles-mainNavWrapper-3.scrolling{
   opacity: 0;
   position: absolute;
+  transition: opacity 1s ease;
 }
 
 body {
