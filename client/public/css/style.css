@@ -12,6 +12,22 @@ menu{
 	font: inherit;
 	vertical-align: baseline;
 } */
+.makeStyles-mainNavWrapper-3.sticky{
+  position: fixed;
+  top: 0px;
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+.makeStyles-mainNavWrapper-3{
+  position: fixed;
+  width: 100%;
+  opacity: 1;
+  transition: width 0.3s ease;
+}
+.makeStyles-mainNavWrapper-3.scrolling{
+  opacity: 0;
+  position: absolute;
+}
 
 body {
   font-family: sans-serif;
@@ -19,24 +35,24 @@ body {
   background: #eee;
 }
 
-.makeStyles-mainNav-3 ul {
+.makeStyles-mainNav-2 ul {
   z-index: 2;
   text-align: right;
   list-style-type: none;
   margin: 0px;
 }
-.makeStyles-mainNav-3 ul a {
+.makeStyles-mainNav-2 ul a {
   color: white;
   text-decoration: none;
   margin-right: 10px;
   padding: 10px;
 }
 
-.makeStyles-mainNav-3 ul a:hover {
+.makeStyles-mainNav-2 ul a:hover {
   background-color: #3498db;
 }
 
-.makeStyles-mainNav-3 li {
+.makeStyles-mainNav-2 li {
   display: inline-block;
   margin-left: 3%;
 }

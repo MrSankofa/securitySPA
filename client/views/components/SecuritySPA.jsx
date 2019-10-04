@@ -15,6 +15,7 @@ const SecuritySPA = (props) => {
             width: '100%',
             height: '75vh',
         },
+
     }));
 
     const classes = useStyles();
