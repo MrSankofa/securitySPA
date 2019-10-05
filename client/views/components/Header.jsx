@@ -157,6 +157,7 @@ const Header = (props) => {
             </div>
 
           </div>
+
           <div className={classes.gridImg} id="gridImg"></div>
         </div>
 
