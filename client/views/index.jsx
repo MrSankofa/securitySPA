@@ -1,5 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
 import SecuritySPA from './components/SecuritySPA.jsx';
+import App from './components/App.jsx'
 
-render(<SecuritySPA />, document.getElementById('security'));
+render(<App />, document.getElementById('security'));

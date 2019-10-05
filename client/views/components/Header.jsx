@@ -76,54 +76,56 @@ const Header = (props) => {
   const classes = useStyles();
 
   const checkHeader = _.throttle(() => {
-    document.querySelector('.makeStyles-mainNavWrapper-3').classList.remove('sticky');
-    console.log('checkHeader')
-    let isScrolling;
-    let stopped = false;
-    console.log('Scrolling has stopped: ', stopped);
-    // // detect scroll position
-    let scrollPosition = Math.round(window.scrollY);
-    console.log('scrollPosition: ', scrollPosition);
-    document.querySelector('.makeStyles-mainNavWrapper-3').classList.add('scrolling')
-    // // if we've scrolled 670 px, add "sticky" class to header
-    // if (scrollPosition > 670) {
-    //   document.querySelector('.makeStyles-mainNavWrapper-3').classList.add('sticky');
-    // } else {
-    //   document.querySelector('.makeStyles-mainNavWrapper-3').classList.remove('sticky');
-    // }
-    // let prevScrollpos = window.pageYOffset;
-    // window.onscroll = function() {
-    //   let currentScrollPos = window.pageYOffset;
+    if (document.querySelector('.makeStyles-mainNavWrapper-61') !== null) {
+      document.querySelector('.makeStyles-mainNavWrapper-61').classList.remove('sticky');
 
-    //   if( prevScrollpos > currentScrollPos) {
-    //     document.getElementById()
-    //   }
-    // }
+      console.log('checkHeader')
+      let isScrolling;
+      let stopped = false;
+      console.log('Scrolling has stopped: ', stopped);
+      // // detect scroll position
+      let scrollPosition = Math.round(window.scrollY);
+      console.log('scrollPosition: ', scrollPosition);
+      document.querySelector('.makeStyles-mainNavWrapper-61').classList.add('scrolling')
+      // // if we've scrolled 610 px, add "sticky" class to header
+      // if (scrollPosition > 610) {
+      //   document.querySelector('.makeStyles-mainNavWrapper-3').classList.add('sticky');
+      // } else {
+      //   document.querySelector('.makeStyles-mainNavWrapper-3').classList.remove('sticky');
+      // }
+      // let prevScrollpos = window.pageYOffset;
+      // window.onscroll = function() {
+      //   let currentScrollPos = window.pageYOffset;
 
-    // onScroll, set isScrolling = true
+      //   if( prevScrollpos > currentScrollPos) {
+      //     document.getElementById()
+      //   }
+      // }
 
-    // if isScrolling is true
+      // onScroll, set isScrolling = true
 
-    window.clearTimeout(isScrolling);
-    var promise = new Promise((resolve, reject) => {
-      isScrolling = setTimeout(() => {
-        stopped = true;
-        console.log('Scrolling has stopped: ', stopped);
-        resolve();
-      }, 2000)
+      // if isScrolling is true
+
+      window.clearTimeout(isScrolling);
+      var promise = new Promise((resolve, reject) => {
+        isScrolling = setTimeout(() => {
+          stopped = true;
+          console.log('Scrolling has stopped: ', stopped);
+          resolve();
+        }, 2000)
 
 
-    })
-    promise.then(() => {
-      if (stopped && scrollPosition > 670) {
-        console.log('triggering if statement');
-        document.querySelector('.makeStyles-mainNavWrapper-3').classList.remove('scrolling')
-        document.querySelector('.makeStyles-mainNavWrapper-3').classList.add('sticky');
-      } else {
-        document.querySelector('.makeStyles-mainNavWrapper-3').classList.remove('sticky');
-      }
-    })
-
+      })
+      promise.then(() => {
+        if (stopped && scrollPosition > 670) {
+          console.log('triggering if statement');
+          document.querySelector('.makeStyles-mainNavWrapper-61').classList.remove('scrolling')
+          document.querySelector('.makeStyles-mainNavWrapper-61').classList.add('sticky');
+        } else {
+          document.querySelector('.makeStyles-mainNavWrapper-61').classList.remove('sticky');
+        }
+      })
+    }
     //
 
     // if not, remove "sticky" class from header

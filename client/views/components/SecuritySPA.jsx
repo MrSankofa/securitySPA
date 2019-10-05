@@ -4,12 +4,12 @@ import Header from './Header.jsx';
 import Sections from './Sections.jsx';
 import GridSPA from './GridSPA.jsx';
 import Card from './Cards.jsx';
-import Carousel from './Carousel.jsx';
+import ReviewList from './ReviewList.jsx';
 import Contact from './Contact.jsx';
 
 
 
-const SecuritySPA = (props) => {
+const SecuritySPA = ({ reviews, slides }) => {
     const useStyles = makeStyles(theme => ({
         root: {
             width: '100%',
@@ -25,7 +25,9 @@ const SecuritySPA = (props) => {
             <Sections />
             <GridSPA />
             <Card />
-            <Carousel />
+            {
+                slides !== 0 ? (<ReviewList reviews={reviews} slides={slides} />) : <div></div>
+            }
             <Contact />
         </div>
     );
