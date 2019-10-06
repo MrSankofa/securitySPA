@@ -12,9 +12,31 @@ const Header = (props) => {
       textAlign: 'right',
       marginRight: '10%'
     },
+    '& .ul': {
+      zIndex: '2',
+      textAlign: 'right',
+      listStyleType: 'none',
+      margin: '0px'
+    },
     mainNavWrapper: {
       paddingTop: '2%',
-      background: 'rgba(0,0,0,0.8)'
+      background: 'rgba(0,0,0,0.8)',
+      width: '100%',
+      opacity: '1',
+      transition: 'width 2s ease',
+      padding: '10px'
+    },
+    '&.sticky': {
+      position: 'fixed',
+      top: '0px',
+      opacity: '1',
+      transition: 'opacity 1s ease',
+      padding: '10px'
+    },
+    '&.scrolling': {
+      opacity: '0',
+      position: 'absolute',
+      transition: 'opacity 1s ease'
     },
     current: {
       backgroundColor: '#3498db'
@@ -76,8 +98,8 @@ const Header = (props) => {
   const classes = useStyles();
 
   const checkHeader = _.throttle(() => {
-    if (document.querySelector('.makeStyles-mainNavWrapper-61') !== null) {
-      document.querySelector('.makeStyles-mainNavWrapper-61').classList.remove('sticky');
+    if (document.querySelector('.makeStyles-mainNavWrapper-63') !== null) {
+      document.querySelector('.makeStyles-mainNavWrapper-63').classList.remove('sticky');
 
       console.log('checkHeader')
       let isScrolling;
@@ -86,9 +108,9 @@ const Header = (props) => {
       // // detect scroll position
       let scrollPosition = Math.round(window.scrollY);
       console.log('scrollPosition: ', scrollPosition);
-      document.querySelector('.makeStyles-mainNavWrapper-61').classList.add('scrolling')
-      // // if we've scrolled 610 px, add "sticky" class to header
-      // if (scrollPosition > 610) {
+      document.querySelector('.makeStyles-mainNavWrapper-63').classList.add('scrolling')
+      // // if we've scrolled 630 px, add "sticky" class to header
+      // if (scrollPosition > 630) {
       //   document.querySelector('.makeStyles-mainNavWrapper-3').classList.add('sticky');
       // } else {
       //   document.querySelector('.makeStyles-mainNavWrapper-3').classList.remove('sticky');
@@ -119,10 +141,10 @@ const Header = (props) => {
       promise.then(() => {
         if (stopped && scrollPosition > 670) {
           console.log('triggering if statement');
-          document.querySelector('.makeStyles-mainNavWrapper-61').classList.remove('scrolling')
-          document.querySelector('.makeStyles-mainNavWrapper-61').classList.add('sticky');
+          document.querySelector('.makeStyles-mainNavWrapper-63').classList.remove('scrolling')
+          document.querySelector('.makeStyles-mainNavWrapper-63').classList.add('sticky');
         } else {
-          document.querySelector('.makeStyles-mainNavWrapper-61').classList.remove('sticky');
+          document.querySelector('.makeStyles-mainNavWrapper-63').classList.remove('sticky');
         }
       })
     }
@@ -138,7 +160,7 @@ const Header = (props) => {
       <div className={classes.mainNavWrapper}>
 
         <nav className={classes.mainNav}>
-          <ul>
+          <ul className={classes.ul}>
             <li><a href="#" >home</a></li>
             <li><a href="#">about us</a></li>
             <li><a href="#">packages</a></li>

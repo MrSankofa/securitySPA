@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Review from './Review.jsx';
-
+import Test from './Test.jsx'
 const ReviewList = (props) => {
 
 
@@ -132,7 +132,7 @@ const ReviewList = (props) => {
         <button onClick={previousSlide}>Prev review</button>
         <button onClick={nextSlide}>Next review</button>
       </div>
-
+      <Test />
     </div>
   )
 }
