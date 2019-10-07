@@ -19,6 +19,7 @@ export default class App extends Component {
         })
       })
       .catch(err => {
+        console.log('Error in retrieve the reviews. Found in App.jsx ComponentDidMount')
         console.error(err)
         this.setState({
           reviews: [],

@@ -108,42 +108,46 @@ const styles = {
   }
 }
 
-const header = ({ classes, children }) => {
+const header = ({ classes }) => {
 
+  let isScrolling;
+  let stopped = [];
 
   const checkHeader = _.throttle(() => {
     if (document.querySelector('.header-mainNavWrapper-5-2-3') !== null) {
-      document.querySelector('.header-mainNavWrapper-5-2-3').classList.add('scrolling')
-      document.querySelector('.header-mainNavWrapper-5-2-3').classList.remove('sticky');
-      let isScrolling;
-      let stopped = [false];
-
-      console.log('Scrolling has stopped: ', stopped);
-      // // detect scroll position
-      let scrollPosition = Math.round(window.scrollY);
-      console.log('scrollPosition: ', scrollPosition);
+      stopped[0] = false;
+      // detect scroll position
+      let scrollPosition = [Math.round(window.scrollY)];
 
       // determine if scrolling
-      window.clearTimeout(isScrolling);
-      isScrolling = setTimeout(() => {
+      if (stopped[0] === false) {
+        document.querySelector('.header-mainNavWrapper-5-2-3').classList.add('scrolling');
+        document.querySelector('.header-mainNavWrapper-5-2-3').classList.remove('sticky')
+      }
+      console.log('Scrolling has stopped: ', stopped);
+      console.log('scrollPosition: ', scrollPosition);
+
+      const runOnce = _.throttle(() => {
+        window.clearTimeout(isScrolling);
         stopped[0] = true;
-        console.log('Scrolling has stopped: ', stopped);
-        if (stopped[0] && scrollPosition > 670) {
-          console.log('triggering if statement');
-          document.querySelector('.header-mainNavWrapper-5-2-3').classList.add('sticky');
-          document.querySelector('.header-mainNavWrapper-5-2-3').classList.remove('scrolling')
-        } else {
-          document.querySelector('.header-mainNavWrapper-5-2-3').classList.remove('sticky');
-          document.querySelector('.header-mainNavWrapper-5-2-3').classList.remove('scrolling')
-        }
 
-      }, 2000)
+        isScrolling = setTimeout(() => {
+          console.log('Scrolling has stopped: ', stopped);
+          if (stopped[0] === true && scrollPosition[0] > 670) {
+            console.log('triggering if statement');
+            document.querySelector('.header-mainNavWrapper-5-2-3').classList.add('sticky');
+            document.querySelector('.header-mainNavWrapper-5-2-3').classList.remove('scrolling')
+          } else {
+            document.querySelector('.header-mainNavWrapper-5-2-3').classList.remove('scrolling')
+            document.querySelector('.header-mainNavWrapper-5-2-3').classList.remove('sticky')
+          }
+        }, 4000)
 
+      }, 3000)
+
+      runOnce();
     }
-    //
-
-    // if not, remove "sticky" class from header
-  }, 300);
+  }, 2000);
 
   window.addEventListener('scroll', checkHeader);
 
