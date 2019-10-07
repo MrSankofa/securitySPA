@@ -18,6 +18,13 @@ export default class App extends Component {
           slides: data.reviews.length
         })
       })
+      .catch(err => {
+        console.error(err)
+        this.setState({
+          reviews: [],
+          slides: 0
+        })
+      })
 
   }
 

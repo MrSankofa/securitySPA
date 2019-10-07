@@ -73,7 +73,21 @@ const Contact = (props) => {
     //     console.error(err);
     //     console.log('There was an error in making the post request');
     //   })
-
+    axios({
+      method: 'post',
+      url: '/contact',
+      data: qs.stringify(postReqData)
+    })
+      .then(results => {
+        console.log('results from Contact form: ', results);
+        if (results === 'success') {
+          alert('contact form submitted')
+        }
+      })
+      .catch(err => {
+        console.error(err);
+        console.log('There was an error in making the post request');
+      })
     // axios({
     //   method: 'get',
     //   url: 'https://api.github.com/users/mrsankofa/repos'

@@ -2,7 +2,6 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
 const Review = props => {
-  console.log('props in Review: ', props);
 
   const useStyles = makeStyles(theme => ({
     review: {

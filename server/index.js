@@ -15,6 +15,10 @@ var port = process.env.PORT || 3008;
 app.get('/DummyYelpServer', (req, res) => {
     res.send(reviewData)
 });
+app.post('/contact', (req, res) => {
+    console.log('req.body: ', req.body);
+    res.send('success')
+});
 
 app.listen(port, function () {
     console.log(`Server is listening on port: ${port}`);

@@ -132,7 +132,7 @@ const ReviewList = (props) => {
         <button onClick={previousSlide}>Prev review</button>
         <button onClick={nextSlide}>Next review</button>
       </div>
-      <Test />
+
     </div>
   )
 }

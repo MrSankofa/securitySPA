@@ -2,7 +2,6 @@ import React from 'react';
 import _ from 'lodash';
 import injectSheet from 'react-jss'
 
-
 const styles = {
   mainNav: {
     zIndex: '3',
@@ -30,23 +29,25 @@ const styles = {
     }
   },
   mainNavWrapper: {
-    paddingTop: '2%',
-    background: 'rgba(0,0,0,0.8)',
+    background: 'rgba(0,0,0,1)',
     width: '100%',
     opacity: '1',
     transition: 'width 2s ease',
     padding: '10px',
+    position: 'fixed',
+    zIndex: 1,
     '&.sticky': {
       position: 'fixed',
       top: '0px',
       opacity: '1',
-      transition: 'opacity 1s ease',
-      padding: '10px'
+      transition: 'opacity 2s ease',
+      padding: '10px',
+      zIndex: 1
     },
     '&.scrolling': {
       opacity: '0',
-      position: 'absolute',
-      transition: 'opacity 1s ease'
+      position: 'fixed',
+      transition: 'opacity 30ms ease'
     }
   },
   current: {
@@ -112,54 +113,32 @@ const header = ({ classes, children }) => {
 
   const checkHeader = _.throttle(() => {
     if (document.querySelector('.header-mainNavWrapper-5-2-3') !== null) {
+      document.querySelector('.header-mainNavWrapper-5-2-3').classList.add('scrolling')
       document.querySelector('.header-mainNavWrapper-5-2-3').classList.remove('sticky');
-
-      console.log('checkHeader')
       let isScrolling;
-      let stopped = false;
+      let stopped = [false];
+
       console.log('Scrolling has stopped: ', stopped);
       // // detect scroll position
       let scrollPosition = Math.round(window.scrollY);
       console.log('scrollPosition: ', scrollPosition);
-      document.querySelector('.header-mainNavWrapper-5-2-3').classList.add('scrolling')
-      // // if we've scrolled 630 px, add "sticky" class to header
-      // if (scrollPosition > 630) {
-      //   document.querySelector('.header-mainNavWrapper-3').classList.add('sticky');
-      // } else {
-      //   document.querySelector('.header-mainNavWrapper-3').classList.remove('sticky');
-      // }
-      // let prevScrollpos = window.pageYOffset;
-      // window.onscroll = function() {
-      //   let currentScrollPos = window.pageYOffset;
 
-      //   if( prevScrollpos > currentScrollPos) {
-      //     document.getElementById()
-      //   }
-      // }
-
-      // onScroll, set isScrolling = true
-
-      // if isScrolling is true
-
+      // determine if scrolling
       window.clearTimeout(isScrolling);
-      var promise = new Promise((resolve, reject) => {
-        isScrolling = setTimeout(() => {
-          stopped = true;
-          console.log('Scrolling has stopped: ', stopped);
-          resolve();
-        }, 2000)
-
-
-      })
-      promise.then(() => {
-        if (stopped && scrollPosition > 670) {
+      isScrolling = setTimeout(() => {
+        stopped[0] = true;
+        console.log('Scrolling has stopped: ', stopped);
+        if (stopped[0] && scrollPosition > 670) {
           console.log('triggering if statement');
-          document.querySelector('.header-mainNavWrapper-5-2-3').classList.remove('scrolling')
           document.querySelector('.header-mainNavWrapper-5-2-3').classList.add('sticky');
+          document.querySelector('.header-mainNavWrapper-5-2-3').classList.remove('scrolling')
         } else {
           document.querySelector('.header-mainNavWrapper-5-2-3').classList.remove('sticky');
+          document.querySelector('.header-mainNavWrapper-5-2-3').classList.remove('scrolling')
         }
-      })
+
+      }, 2000)
+
     }
     //
 
@@ -205,3 +184,59 @@ const header = ({ classes, children }) => {
 }
 const Header = injectSheet(styles)(header)
 export default Header;
+
+ // // if we've scrolled 630 px, add "sticky" class to header
+      // if (scrollPosition > 630) {
+      //   document.querySelector('.header-mainNavWrapper-3').classList.add('sticky');
+      // } else {
+      //   document.querySelector('.header-mainNavWrapper-3').classList.remove('sticky');
+      // }
+      // let prevScrollpos = window.pageYOffset;
+      // window.onscroll = function() {
+      //   let currentScrollPos = window.pageYOffset;
+
+      //   if( prevScrollpos > currentScrollPos) {
+      //     document.getElementById()
+      //   }
+      // }
+
+      // onScroll, set isScrolling = true
+
+      // if isScrolling is true
+
+
+/**
+ * if (document.querySelector('.header-mainNavWrapper-5-2-3') !== null) {
+      document.querySelector('.header-mainNavWrapper-5-2-3').classList.remove('sticky');
+
+      let isScrolling;
+      let stopped = [false];
+
+      console.log('Scrolling has stopped: ', stopped);
+      // // detect scroll position
+      let scrollPosition = Math.round(window.scrollY);
+      console.log('scrollPosition: ', scrollPosition);
+
+      window.clearTimeout(isScrolling);
+
+      var promise = new Promise((resolve, reject) => {
+        isScrolling = setTimeout(() => {
+          stopped[0] = true;
+          console.log('Scrolling has stopped: ', stopped);
+          resolve();
+        }, 2000)
+      })
+
+      promise.then(() => {
+        if (stopped[0] && scrollPosition > 670) {
+          console.log('triggering if statement');
+          document.querySelector('.header-mainNavWrapper-5-2-3').classList.add('sticky');
+          document.querySelector('.header-mainNavWrapper-5-2-3').classList.remove('scrolling')
+        } else {
+          document.querySelector('.header-mainNavWrapper-5-2-3').classList.add('scrolling')
+          document.querySelector('.header-mainNavWrapper-5-2-3').classList.remove('sticky');
+        }
+      })
+      document.querySelector('.header-mainNavWrapper-5-2-3').classList.add('scrolling')
+    }
+ */
