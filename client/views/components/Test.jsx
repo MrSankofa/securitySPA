@@ -16,8 +16,18 @@ const styles = {
       textAlign: 'right',
       listStyleType: 'none',
       margin: '0px',
-      '& li': {
-        color: 'white'
+    }
+  },
+  li: {
+    display: 'inline-block',
+    marginLeft: '3%',
+    '& a': {
+      color: 'white',
+      textDecoration: 'none',
+      marginRight: '10px',
+      padding: '10px',
+      '&:hover': {
+        background: '#3498db'
       }
     }
   },
@@ -29,8 +39,11 @@ const styles = {
     transition: 'width 2s ease',
     padding: '10px',
     '& .sticky': {
-      // jss-nested applies this to a child span
-      fontWeight: 'bold' // jss-camel-case turns this into 'font-weight'
+      position: 'fixed',
+      top: '0px',
+      opacity: '1',
+      transition: 'opacity 1s ease',
+      padding: '10px'
     },
     '&.scrolling': {
       opacity: '0',
@@ -38,8 +51,61 @@ const styles = {
       transition: 'opacity 1s ease'
     }
   },
-  myLabel: {
-    fontStyle: 'italic'
+  current: {
+    backgroundColor: '#3498db'
+  },
+  header: {
+    height: '670px',
+    backgroundImage: 'url(./img/sourceImages/neighborhood.jpg)',
+    backgroundRepeat: 'round',
+    width: '100%',
+    borderRadius: '0 0 0 85px',
+    backgroundSize: 'cover'
+  },
+  headerContent: {
+    paddingLeft: '10%',
+    paddingTop: '5%',
+    position: 'relative'
+  },
+  mainTitle: {
+    color: 'white',
+    lineHeight: '160%',
+    marginTop: '10%'
+  },
+  mainDescription: {
+    color: '#b6bab9',
+    lineHeight: '180%',
+    marginTop: '3%',
+    fontSize: '17px'
+  },
+  buttonWrapper: {
+    marginTop: '55px'
+  },
+  contactUs: {
+    backgroundColor: '#3498db',
+    color: 'white',
+    padding: '15px 65px',
+    border: 'none',
+    marginRight: '2%',
+    fontSize: '15px'
+  },
+  learnMore: {
+    backgroundColor: 'white',
+    color: 'black',
+    padding: '15px 65px',
+    border: 'none',
+    fontSize: '15px'
+  },
+  whiteBkg: {
+    backgroundColor: '#fefefe'
+  },
+  overlay: {
+    backgroundColor: 'black',
+    position: 'absolute',
+    opacity: '0.5',
+    width: '100%',
+    height: '670px',
+    borderRadius: '0 0 0 85px',
   }
 }
 
@@ -50,11 +116,11 @@ const Button = ({ classes, children }) => (
 
     <nav className={classes.mainNav}>
       <ul className={classes.ul}>
-        <li><a href="#" >home</a></li>
-        <li><a href="#">about us</a></li>
-        <li><a href="#">packages</a></li>
-        <li><a href="#">reviews</a></li>
-        <li><a href="#" className={classes.current}>contact us</a></li>
+        <li className={classes.li} ><a href="#" >home</a></li>
+        <li className={classes.li}><a href="#">about us</a></li>
+        <li className={classes.li}><a href="#">packages</a></li>
+        <li className={classes.li}><a href="#">reviews</a></li>
+        <li className={classes.li}><a href="#" className={classes.current}>contact us</a></li>
       </ul>
     </nav>
   </div>

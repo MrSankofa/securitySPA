@@ -1,31 +1,41 @@
 import React from 'react';
 import _ from 'lodash';
+import injectSheet from 'react-jss'
 
-import { makeStyles } from '@material-ui/core/styles';
 
-
-const Header = (props) => {
-  const useStyles = makeStyles(theme => ({
-    mainNav: {
-      zIndex: '3',
-      color: 'white',
-      textAlign: 'right',
-      marginRight: '10%'
-    },
-    '& .ul': {
+const styles = {
+  mainNav: {
+    zIndex: '3',
+    color: 'white',
+    textAlign: 'right',
+    marginRight: '10%',
+    '& ul': {
       zIndex: '2',
       textAlign: 'right',
       listStyleType: 'none',
-      margin: '0px'
-    },
-    mainNavWrapper: {
-      paddingTop: '2%',
-      background: 'rgba(0,0,0,0.8)',
-      width: '100%',
-      opacity: '1',
-      transition: 'width 2s ease',
-      padding: '10px'
-    },
+      margin: '0px',
+    }
+  },
+  li: {
+    display: 'inline-block',
+    marginLeft: '3%',
+    '& a': {
+      color: 'white',
+      textDecoration: 'none',
+      marginRight: '10px',
+      padding: '10px',
+      '&:hover': {
+        background: '#3498db'
+      }
+    }
+  },
+  mainNavWrapper: {
+    paddingTop: '2%',
+    background: 'rgba(0,0,0,0.8)',
+    width: '100%',
+    opacity: '1',
+    transition: 'width 2s ease',
+    padding: '10px',
     '&.sticky': {
       position: 'fixed',
       top: '0px',
@@ -37,69 +47,72 @@ const Header = (props) => {
       opacity: '0',
       position: 'absolute',
       transition: 'opacity 1s ease'
-    },
-    current: {
-      backgroundColor: '#3498db'
-    },
-    header: {
-      height: '670px',
-      backgroundImage: 'url(./img/sourceImages/neighborhood.jpg)',
-      backgroundRepeat: 'round',
-      width: '100%',
-      borderRadius: '0 0 0 85px',
-      backgroundSize: 'cover'
-    },
-    headerContent: {
-      paddingLeft: '10%',
-      paddingTop: '5%',
-      position: 'relative'
-    },
-    mainTitle: {
-      color: 'white',
-      lineHeight: '160%',
-      marginTop: '10%'
-    },
-    mainDescription: {
-      color: '#b6bab9',
-      lineHeight: '180%',
-      marginTop: '3%',
-      fontSize: '17px'
-    },
-    buttonWrapper: {
-      marginTop: '55px'
-    },
-    contactUs: {
-      backgroundColor: '#3498db',
-      color: 'white',
-      padding: '15px 65px',
-      border: 'none',
-      marginRight: '2%',
-      fontSize: '15px'
-    },
-    learnMore: {
-      backgroundColor: 'white',
-      color: 'black',
-      padding: '15px 65px',
-      border: 'none',
-      fontSize: '15px'
-    },
-    whiteBkg: {
-      backgroundColor: '#fefefe'
-    },
-    overlay: {
-      backgroundColor: 'black',
-      position: 'absolute',
-      opacity: '0.5',
-      width: '100%',
-      height: '670px',
-      borderRadius: '0 0 0 85px',
     }
-  }));
-  const classes = useStyles();
+  },
+  current: {
+    backgroundColor: '#3498db'
+  },
+  header: {
+    height: '670px',
+    backgroundImage: 'url(./img/sourceImages/neighborhood.jpg)',
+    backgroundRepeat: 'round',
+    width: '100%',
+    borderRadius: '0 0 0 85px',
+    backgroundSize: 'cover'
+  },
+  headerContent: {
+    paddingLeft: '10%',
+    paddingTop: '5%',
+    position: 'relative'
+  },
+  mainTitle: {
+    color: 'white',
+    lineHeight: '160%',
+    marginTop: '10%'
+  },
+  mainDescription: {
+    color: '#b6bab9',
+    lineHeight: '180%',
+    marginTop: '3%',
+    fontSize: '17px'
+  },
+  buttonWrapper: {
+    marginTop: '55px'
+  },
+  contactUs: {
+    backgroundColor: '#3498db',
+    color: 'white',
+    padding: '15px 65px',
+    border: 'none',
+    marginRight: '2%',
+    fontSize: '15px'
+  },
+  learnMore: {
+    backgroundColor: 'white',
+    color: 'black',
+    padding: '15px 65px',
+    border: 'none',
+    fontSize: '15px'
+  },
+  whiteBkg: {
+    backgroundColor: '#fefefe'
+  },
+  overlay: {
+    backgroundColor: 'black',
+    position: 'absolute',
+    opacity: '0.5',
+    width: '100%',
+    height: '670px',
+    borderRadius: '0 0 0 85px',
+  }
+}
+
+const header = ({ classes, children }) => {
+
 
   const checkHeader = _.throttle(() => {
-    if (document.querySelector('.makeStyles-mainNavWrapper-63') !== null) {
-      document.querySelector('.makeStyles-mainNavWrapper-63').classList.remove('sticky');
+    if (document.querySelector('.header-mainNavWrapper-5-2-3') !== null) {
+      document.querySelector('.header-mainNavWrapper-5-2-3').classList.remove('sticky');
 
       console.log('checkHeader')
       let isScrolling;
@@ -108,12 +121,12 @@ const Header = (props) => {
       // // detect scroll position
       let scrollPosition = Math.round(window.scrollY);
       console.log('scrollPosition: ', scrollPosition);
-      document.querySelector('.makeStyles-mainNavWrapper-63').classList.add('scrolling')
+      document.querySelector('.header-mainNavWrapper-5-2-3').classList.add('scrolling')
       // // if we've scrolled 630 px, add "sticky" class to header
       // if (scrollPosition > 630) {
-      //   document.querySelector('.makeStyles-mainNavWrapper-3').classList.add('sticky');
+      //   document.querySelector('.header-mainNavWrapper-3').classList.add('sticky');
       // } else {
-      //   document.querySelector('.makeStyles-mainNavWrapper-3').classList.remove('sticky');
+      //   document.querySelector('.header-mainNavWrapper-3').classList.remove('sticky');
       // }
       // let prevScrollpos = window.pageYOffset;
       // window.onscroll = function() {
@@ -141,10 +154,10 @@ const Header = (props) => {
       promise.then(() => {
         if (stopped && scrollPosition > 670) {
           console.log('triggering if statement');
-          document.querySelector('.makeStyles-mainNavWrapper-63').classList.remove('scrolling')
-          document.querySelector('.makeStyles-mainNavWrapper-63').classList.add('sticky');
+          document.querySelector('.header-mainNavWrapper-5-2-3').classList.remove('scrolling')
+          document.querySelector('.header-mainNavWrapper-5-2-3').classList.add('sticky');
         } else {
-          document.querySelector('.makeStyles-mainNavWrapper-63').classList.remove('sticky');
+          document.querySelector('.header-mainNavWrapper-5-2-3').classList.remove('sticky');
         }
       })
     }
@@ -161,11 +174,11 @@ const Header = (props) => {
 
         <nav className={classes.mainNav}>
           <ul className={classes.ul}>
-            <li><a href="#" >home</a></li>
-            <li><a href="#">about us</a></li>
-            <li><a href="#">packages</a></li>
-            <li><a href="#">reviews</a></li>
-            <li><a href="#" className={classes.current}>contact us</a></li>
+            <li className={classes.li}><a href="#" >home</a></li>
+            <li className={classes.li}><a href="#">about us</a></li>
+            <li className={classes.li}><a href="#">packages</a></li>
+            <li className={classes.li}><a href="#">reviews</a></li>
+            <li className={classes.li}><a href="#" className={classes.current}>contact us</a></li>
           </ul>
         </nav>
       </div>
@@ -190,5 +203,5 @@ const Header = (props) => {
     </React.Fragment>
   )
 }
-
+const Header = injectSheet(styles)(header)
 export default Header;
