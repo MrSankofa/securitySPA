@@ -12,8 +12,7 @@ import Contact from './Contact.jsx';
 const SecuritySPA = ({ reviews, slides }) => {
     const useStyles = makeStyles(theme => ({
         root: {
-            width: '100%',
-            height: '75vh',
+            width: '100%'
         },
 
     }));

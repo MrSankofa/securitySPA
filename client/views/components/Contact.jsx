@@ -10,6 +10,15 @@ import qs from 'qs';
 const Contact = (props) => {
   const useStyles = makeStyles(theme => ({
     contactWrapper: {
+      [theme.breakpoints.down('sm')]: {
+        backgroundColor: 'red',
+      },
+      [theme.breakpoints.between('sm', 'md')]: {
+        backgroundColor: 'blue',
+      },
+      [theme.breakpoints.between('lg', 'xl')]: {
+
+      },
       width: '100%',
       height: '680px',
       backgroundImage: 'url(\'./img/sourceImages/contactUs.jpg\')',
@@ -18,6 +27,15 @@ const Contact = (props) => {
       borderRadius: '0 10% 0 0'
     },
     overlay: {
+      [theme.breakpoints.down('sm')]: {
+        backgroundColor: 'red',
+      },
+      [theme.breakpoints.between('sm', 'md')]: {
+        backgroundColor: 'blue',
+      },
+      [theme.breakpoints.between('lg', 'xl')]: {
+
+      },
       width: '100%',
       height: '680px',
       position: 'absolute',
@@ -26,6 +44,15 @@ const Contact = (props) => {
       borderRadius: '0 10% 0 0'
     },
     form: {
+      [theme.breakpoints.down('sm')]: {
+        backgroundColor: 'red',
+      },
+      [theme.breakpoints.between('sm', 'md')]: {
+        backgroundColor: 'blue',
+      },
+      [theme.breakpoints.between('lg', 'xl')]: {
+
+      },
       width: '620px',
       height: '680px',
       margin: '0 auto',
@@ -33,12 +60,30 @@ const Contact = (props) => {
       position: 'relative'
     },
     field: {
+      [theme.breakpoints.down('sm')]: {
+        backgroundColor: 'red',
+      },
+      [theme.breakpoints.between('sm', 'md')]: {
+        backgroundColor: 'blue',
+      },
+      [theme.breakpoints.between('lg', 'xl')]: {
+
+      },
       border: 'none',
       height: '32px',
       width: '220px',
       margin: '13px'
     },
     textArea: {
+      [theme.breakpoints.down('sm')]: {
+        backgroundColor: 'red',
+      },
+      [theme.breakpoints.between('sm', 'md')]: {
+        backgroundColor: 'blue',
+      },
+      [theme.breakpoints.between('lg', 'xl')]: {
+
+      },
       width: '462px',
       height: '150px',
       marginTop: '10px'

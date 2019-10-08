@@ -5,42 +5,104 @@ import Paper from '@material-ui/core/Paper';
 import Package from './Package.jsx'
 import injectSheet from 'react-jss'
 
-const styles = {
-  cardSection: {
-    '& h1': {
-      textAlign: 'center',
-      lineHeight: '155%',
-      marginBottom: '7%',
-      '& span': {
-        color: '#3498db'
+// const styles = {
+//   cardSection: {
+//     '& h1': {
+//       textAlign: 'center',
+//       lineHeight: '155%',
+//       marginBottom: '7%',
+//       '& span': {
+//         color: '#3498db'
+//       }
+//     }
+//   },
+//   packageButtons: {
+//     backgroundColor: '#fefefe',
+//     width: '28%',
+//     margin: '3% auto',
+//     '& button': {
+//       margin: '1%',
+//       width: '30%',
+//       padding: '2%',
+//       backgroundColor: '#fefefe',
+//       border: 'none'
+//     }
+//   },
+//   packageFeaturesUL: {
+
+//   },
+//   cardWrapper: {
+//     margin: '0 auto 6%',
+//     width: '62%'
+//   }
+
+// }
+
+
+
+const Cards = () => {
+
+  const useStyles = makeStyles(theme => ({
+    cardSection: {
+      [theme.breakpoints.down('sm')]: {
+        backgroundColor: 'red',
+      },
+      [theme.breakpoints.between('sm', 'md')]: {
+        backgroundColor: 'blue',
+      },
+      [theme.breakpoints.between('lg', 'xl')]: {
+
+      },
+      '& h1': {
+        textAlign: 'center',
+        lineHeight: '155%',
+        marginBottom: '7%',
+        '& span': {
+          color: '#3498db'
+        }
       }
-    }
-  },
-  packageButtons: {
-    backgroundColor: '#fefefe',
-    width: '28%',
-    margin: '3% auto',
-    '& button': {
-      margin: '1%',
-      width: '30%',
-      padding: '2%',
+    },
+    packageButtons: {
+      [theme.breakpoints.down('sm')]: {
+        backgroundColor: 'red',
+      },
+      [theme.breakpoints.between('sm', 'md')]: {
+        backgroundColor: 'blue',
+      },
+      [theme.breakpoints.between('lg', 'xl')]: {
+
+      },
       backgroundColor: '#fefefe',
-      border: 'none'
+      width: '28%',
+      margin: '3% auto',
+      '& button': {
+        margin: '1%',
+        width: '30%',
+        padding: '2%',
+        backgroundColor: '#fefefe',
+        border: 'none'
+      }
+    },
+    packageFeaturesUL: {
+
+    },
+    cardWrapper: {
+      [theme.breakpoints.down('sm')]: {
+        backgroundColor: 'red',
+      },
+      [theme.breakpoints.between('sm', 'md')]: {
+        backgroundColor: 'blue',
+      },
+      [theme.breakpoints.between('lg', 'xl')]: {
+
+      },
+      margin: '0 auto 6%',
+      width: '62%'
     }
-  },
-  packageFeaturesUL: {
 
-  },
-  cardWrapper: {
-    margin: '0 auto 6%',
-    width: '62%'
-  }
+  }));
 
-}
-
-
-
-const cards = ({ classes }) => {
+  const classes = useStyles();
 
   return (
     <div className={classes.cardSection}>
@@ -62,5 +124,5 @@ const cards = ({ classes }) => {
   )
 }
 
-const Cards = injectSheet(styles)(cards)
+
 export default Cards;

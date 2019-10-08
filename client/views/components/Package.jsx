@@ -5,6 +5,15 @@ import { makeStyles } from '@material-ui/core/styles';
 const Package = props => {
   const useStyles = makeStyles(theme => ({
     package: {
+      [theme.breakpoints.down('sm')]: {
+        backgroundColor: 'red',
+      },
+      [theme.breakpoints.between('sm', 'md')]: {
+        backgroundColor: 'blue',
+      },
+      [theme.breakpoints.between('lg', 'xl')]: {
+
+      },
       width: '275px',
       backgroundColor: '#fefefe',
       display: 'inline-block',
@@ -14,26 +23,71 @@ const Package = props => {
 
     },
     purchase: {
+      [theme.breakpoints.down('sm')]: {
+        backgroundColor: 'red',
+      },
+      [theme.breakpoints.between('sm', 'md')]: {
+        backgroundColor: 'blue',
+      },
+      [theme.breakpoints.between('lg', 'xl')]: {
+
+      },
       width: '100px',
       height: '34px',
       backgroundColor: 'darkslategray',
       color: 'white'
     },
     learnMore: {
+      [theme.breakpoints.down('sm')]: {
+        backgroundColor: 'red',
+      },
+      [theme.breakpoints.between('sm', 'md')]: {
+        backgroundColor: 'blue',
+      },
+      [theme.breakpoints.between('lg', 'xl')]: {
+
+      },
       borderColor: 'darkslategrey',
       width: '100px',
       height: '34px',
       marginLeft: '10px'
     },
     packageTitle: {
+      [theme.breakpoints.down('sm')]: {
+        backgroundColor: 'red',
+      },
+      [theme.breakpoints.between('sm', 'md')]: {
+        backgroundColor: 'blue',
+      },
+      [theme.breakpoints.between('lg', 'xl')]: {
+
+      },
       textAlign: 'center'
     },
     packageText: {
+      [theme.breakpoints.down('sm')]: {
+        backgroundColor: 'red',
+      },
+      [theme.breakpoints.between('sm', 'md')]: {
+        backgroundColor: 'blue',
+      },
+      [theme.breakpoints.between('lg', 'xl')]: {
+
+      },
       textAlign: 'center',
       color: '#9d9ea6',
       lineHeight: '130%'
     },
     packageFeaturesLi: {
+      [theme.breakpoints.down('sm')]: {
+        backgroundColor: 'red',
+      },
+      [theme.breakpoints.between('sm', 'md')]: {
+        backgroundColor: 'blue',
+      },
+      [theme.breakpoints.between('lg', 'xl')]: {
+
+      },
       padding: '3%',
       fontSize: '15px',
       color: 'darkslategrey',
@@ -41,6 +95,15 @@ const Package = props => {
       lineHeight: '150%'
     },
     buttonWrapper: {
+      [theme.breakpoints.down('sm')]: {
+        backgroundColor: 'red',
+      },
+      [theme.breakpoints.between('sm', 'md')]: {
+        backgroundColor: 'blue',
+      },
+      [theme.breakpoints.between('lg', 'xl')]: {
+
+      },
       width: '212px',
       margin: '45px auto 0'
     }

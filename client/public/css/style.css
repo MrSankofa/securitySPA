@@ -71,15 +71,15 @@ h1 {
   background-image: url('../img/sourceImages/jason-briscoe-UV81E0oXXWQ-unsplash.jpg')
 }
 
-#gridImg {
+/* #gridImg {
   background-image: url('../img/sourceImages/gridImg.jpg');
-}
+} */
 
 #sofa {
   background-image: url('../img/sourceImages/sofa.jpg')
 }
 
-.makeStyles-cardSection-93 h1 {
+/* .makeStyles-cardSection-93 h1 {
   text-align: center;
   line-height: 155%;
   margin-bottom: 7%;
@@ -95,4 +95,4 @@ h1 {
     padding: 2%;
     background-color: #fefefe;
     border: none;
-}
+} */
