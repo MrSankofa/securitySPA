@@ -1,268 +1,139 @@
 import React from 'react';
 import _ from 'lodash';
 import injectSheet from 'react-jss'
-import { makeStyles } from '@material-ui/core/styles';
 
-/**
- * root: {
-      padding: theme.spacing(1),
-      [theme.breakpoints.down('sm')]: {
-        backgroundColor: 'red',
-      },
-      [theme.breakpoints.up('md')]: {
-        backgroundColor: 'blue',
-      },
-      [theme.breakpoints.up('lg')]: {
-        backgroundColor: 'green',
-      },
+const styles = {
+  mainNav: {
+    zIndex: '3',
+    color: 'white',
+    textAlign: 'right',
+    marginRight: '10%',
+    '& ul': {
+      zIndex: '2',
+      textAlign: 'right',
+      listStyleType: 'none',
+      margin: '0px',
     }
- */
-
-const Header = () => {
-
-  const useStyles = makeStyles(theme => ({
-    mainNav: {
-      [theme.breakpoints.down('sm')]: {
-        backgroundColor: 'red',
-      },
-      [theme.breakpoints.between('sm', 'md')]: {
-        backgroundColor: 'blue',
-      },
-      [theme.breakpoints.between('lg', 'xl')]: {
-        zIndex: '3',
-        color: 'white',
-        textAlign: 'right',
-        marginRight: '10%',
-        '& ul': {
-          zIndex: '2',
-          textAlign: 'right',
-          listStyleType: 'none',
-          margin: '0px',
-        }
-      },
-
-    },
-    li: {
-      [theme.breakpoints.down('sm')]: {
-        backgroundColor: 'red',
-      },
-      [theme.breakpoints.between('sm', 'md')]: {
-        backgroundColor: 'blue',
-      },
-      [theme.breakpoints.between('lg', 'xl')]: {
-        display: 'inline-block',
-        marginLeft: '3%',
-        '& a': {
-          color: 'white',
-          textDecoration: 'none',
-          marginRight: '10px',
-          padding: '10px',
-          '&:hover': {
-            background: '#3498db'
-          }
-        }
-      },
-
-    },
-    mainNavWrapper: {
-      [theme.breakpoints.down('sm')]: {
-        backgroundColor: 'red',
-      },
-      [theme.breakpoints.between('sm', 'md')]: {
-        backgroundColor: 'blue',
-      },
-      [theme.breakpoints.between('lg', 'xl')]: {
-        background: 'rgba(0,0,0,1)',
-        width: '100%',
-        opacity: '1',
-        transition: 'width 2s ease',
-        padding: '10px',
-        position: 'fixed',
-        zIndex: 1,
-        '&.sticky': {
-          position: 'fixed',
-          top: '0px',
-          opacity: '1',
-          transition: 'opacity 2s ease',
-          padding: '10px',
-          zIndex: 1
-        },
-        '&.scrolling': {
-          opacity: '0',
-          position: 'fixed',
-          transition: 'opacity 30ms ease'
-        }
-      },
-
-    },
-    current: {
-      backgroundColor: '#3498db'
-    },
-    header: {
-      [theme.breakpoints.down('sm')]: {
-        backgroundColor: 'red',
-      },
-      [theme.breakpoints.between('sm', 'md')]: {
-        backgroundColor: 'blue',
-      },
-      [theme.breakpoints.between('lg', 'xl')]: {
-        height: '670px',
-        backgroundImage: 'url(./img/sourceImages/neighborhood.jpg)',
-        backgroundRepeat: 'round',
-        width: '100%',
-        borderRadius: '0 0 0 85px',
-        backgroundSize: 'cover'
-      },
-
-    },
-    headerContent: {
-      [theme.breakpoints.down('sm')]: {
-        backgroundColor: 'red',
-      },
-      [theme.breakpoints.between('sm', 'md')]: {
-        backgroundColor: 'blue',
-      },
-      [theme.breakpoints.between('lg', 'xl')]: {
-        paddingLeft: '10%',
-        paddingTop: '5%',
-        position: 'relative'
-      },
-
-    },
-    mainTitle: {
-      [theme.breakpoints.down('sm')]: {
-        backgroundColor: 'red',
-      },
-      [theme.breakpoints.between('sm', 'md')]: {
-        backgroundColor: 'blue',
-      },
-      [theme.breakpoints.between('lg', 'xl')]: {
-        color: 'white',
-        lineHeight: '160%',
-        marginTop: '10%'
-      },
-
-    },
-    mainDescription: {
-      [theme.breakpoints.down('sm')]: {
-        backgroundColor: 'red',
-      },
-      [theme.breakpoints.between('sm', 'md')]: {
-        backgroundColor: 'blue',
-      },
-      [theme.breakpoints.between('lg', 'xl')]: {
-        color: '#b6bab9',
-        lineHeight: '180%',
-        marginTop: '3%',
-        fontSize: '17px'
-      },
-
-    },
-    buttonWrapper: {
-      [theme.breakpoints.down('sm')]: {
-        backgroundColor: 'red',
-      },
-      [theme.breakpoints.between('sm', 'md')]: {
-        backgroundColor: 'blue',
-      },
-      [theme.breakpoints.between('lg', 'xl')]: {
-        marginTop: '55px'
-      },
-    },
-    contactUs: {
-      [theme.breakpoints.down('sm')]: {
-        backgroundColor: 'red',
-      },
-      [theme.breakpoints.between('sm', 'md')]: {
-        backgroundColor: 'blue',
-      },
-      [theme.breakpoints.between('lg', 'xl')]: {
-        backgroundColor: '#3498db',
-        color: 'white',
-        padding: '15px 65px',
-        border: 'none',
-        marginRight: '2%',
-        fontSize: '15px'
-      },
-
-    },
-    learnMore: {
-      [theme.breakpoints.down('sm')]: {
-        backgroundColor: 'red',
-      },
-      [theme.breakpoints.between('sm', 'md')]: {
-        backgroundColor: 'blue',
-      },
-      [theme.breakpoints.between('lg', 'xl')]: {
-        backgroundColor: 'white',
-        color: 'black',
-        padding: '15px 65px',
-        border: 'none',
-        fontSize: '15px'
-      },
-
-    },
-    whiteBkg: {
-      backgroundColor: '#fefefe'
-    },
-    overlay: {
-      [theme.breakpoints.down('sm')]: {
-        backgroundColor: 'red',
-      },
-      [theme.breakpoints.between('sm', 'md')]: {
-        backgroundColor: 'blue',
-      },
-      [theme.breakpoints.between('lg', 'xl')]: {
-        backgroundColor: 'black',
-        position: 'absolute',
-        opacity: '0.5',
-        width: '100%',
-        height: '670px',
-        borderRadius: '0 0 0 85px',
-      },
-
-    },
-    gridImg: {
-      [theme.breakpoints.down('sm')]: {
-        backgroundColor: 'red',
-      },
-      [theme.breakpoints.between('sm', 'md')]: {
-        backgroundColor: 'blue',
-      },
-      [theme.breakpoints.between('lg', 'xl')]: {
-        width: '100%',
-        height: '96px',
-        background: 'url(./img/sourceImages/gridImg.jpg)',
-        backgroundSize: '100%',
-        margin: 0,
-        top: '-19px',
-        position: 'relative',
-        zIndex: '-1',
-        left: '161px'
-      },
-
-    },
-    gridWhiteBkg: {
-      backgroundColor: '#fefefe'
+  },
+  li: {
+    display: 'inline-block',
+    marginLeft: '3%',
+    '& a': {
+      color: 'white',
+      textDecoration: 'none',
+      marginRight: '10px',
+      padding: '10px',
+      '&:hover': {
+        background: '#3498db'
+      }
     }
+  },
+  mainNavWrapper: {
+    background: 'rgba(0,0,0,1)',
+    width: '100%',
+    opacity: '1',
+    transition: 'width 2s ease',
+    padding: '10px',
+    position: 'fixed',
+    zIndex: 1,
+    '&.sticky': {
+      position: 'fixed',
+      top: '0px',
+      opacity: '1',
+      transition: 'opacity 2s ease',
+      padding: '10px',
+      zIndex: 1
+    },
+    '&.scrolling': {
+      opacity: '0',
+      position: 'fixed',
+      transition: 'opacity 30ms ease'
+    }
+  },
+  current: {
+    backgroundColor: '#3498db'
+  },
+  header: {
+    height: '670px',
+    backgroundImage: 'url(./img/sourceImages/neighborhood.jpg)',
+    backgroundRepeat: 'round',
+    width: '100%',
+    borderRadius: '0 0 0 85px',
+    backgroundSize: 'cover'
+  },
+  headerContent: {
+    paddingLeft: '10%',
+    paddingTop: '5%',
+    position: 'relative'
+  },
+  mainTitle: {
+    color: 'white',
+    lineHeight: '160%',
+    marginTop: '10%'
+  },
+  mainDescription: {
+    color: '#b6bab9',
+    lineHeight: '180%',
+    marginTop: '3%',
+    fontSize: '17px'
+  },
+  buttonWrapper: {
+    marginTop: '55px'
+  },
+  contactUs: {
+    backgroundColor: '#3498db',
+    color: 'white',
+    padding: '15px 65px',
+    border: 'none',
+    marginRight: '2%',
+    fontSize: '15px'
+  },
+  learnMore: {
+    backgroundColor: 'white',
+    color: 'black',
+    padding: '15px 65px',
+    border: 'none',
+    fontSize: '15px'
+  },
+  whiteBkg: {
+    backgroundColor: '#fefefe'
+  },
+  overlay: {
+    backgroundColor: 'black',
+    position: 'absolute',
+    opacity: '0.5',
+    width: '100%',
+    height: '670px',
+    borderRadius: '0 0 0 85px',
+  },
+  gridImg: {
+    width: '225px',
+    height: '96px',
+    background: 'url(./img/sourceImages/gridImg.jpg)',
+    backgroundSize: '100%',
+    margin: 0,
+    top: '-19px',
+    position: 'relative',
+    zIndex: '-1',
+    left: '161px'
+  }
+}
 
-  }));
-
-  const classes = useStyles();
+const header = ({ classes }) => {
 
   let isScrolling;
   let stopped = [];
 
   const checkHeader = _.throttle(() => {
-    if (document.querySelector('.makeStyles-mainNavWrapper-61') !== null) {
+    if (document.querySelector('.header-mainNavWrapper-5-2-3') !== null) {
       stopped[0] = false;
       // detect scroll position
       let scrollPosition = [Math.round(window.scrollY)];
 
       // determine if scrolling
       if (stopped[0] === false) {
-        document.querySelector('.makeStyles-mainNavWrapper-61').classList.add('scrolling');
-        document.querySelector('.makeStyles-mainNavWrapper-61').classList.remove('sticky')
+        document.querySelector('.header-mainNavWrapper-5-2-3').classList.add('scrolling');
+        document.querySelector('.header-mainNavWrapper-5-2-3').classList.remove('sticky')
       }
       console.log('Scrolling has stopped: ', stopped);
       console.log('scrollPosition: ', scrollPosition);
@@ -275,11 +146,11 @@ const Header = () => {
           console.log('Scrolling has stopped: ', stopped);
           if (stopped[0] === true && scrollPosition[0] > 670) {
             console.log('triggering if statement');
-            document.querySelector('.makeStyles-mainNavWrapper-61').classList.add('sticky');
-            document.querySelector('.makeStyles-mainNavWrapper-61').classList.remove('scrolling')
+            document.querySelector('.header-mainNavWrapper-5-2-3').classList.add('sticky');
+            document.querySelector('.header-mainNavWrapper-5-2-3').classList.remove('scrolling')
           } else {
-            document.querySelector('.makeStyles-mainNavWrapper-61').classList.remove('scrolling')
-            document.querySelector('.makeStyles-mainNavWrapper-61').classList.remove('sticky')
+            document.querySelector('.header-mainNavWrapper-5-2-3').classList.remove('scrolling')
+            document.querySelector('.header-mainNavWrapper-5-2-3').classList.remove('sticky')
           }
         }, 4000)
 
@@ -304,11 +175,8 @@ const Header = () => {
             <li className={classes.li}><a href="#" className={classes.current}>contact us</a></li>
           </ul>
         </nav>
-
       </div>
-
       <div className={classes.whiteBkg}>
-
         <div className={classes.header}>
           <div className={classes.overlay}></div>
           <div className={classes.headerContent}>
@@ -322,16 +190,16 @@ const Header = () => {
           </div>
 
         </div>
-        <div className={classes.gridImg} id="gridImg"></div>
 
       </div>
+      <div className={classes.whiteBkg}></div>
+      <div className={classes.gridImg} id="gridImg"></div>
 
     </React.Fragment>
   )
 }
+const Header = injectSheet(styles)(header)
 export default Header;
-// const Header = injectSheet(styles)(header)
-// export default Header;
 
  // // if we've scrolled 630 px, add "sticky" class to header
       // if (scrollPosition > 630) {
@@ -387,139 +255,4 @@ export default Header;
       })
       document.querySelector('.header-mainNavWrapper-5-2-3').classList.add('scrolling')
     }
- */
-
-/**
- * const styles = {
- '@media (max-width: 1200px)': {
-   mainNav: {
-     zIndex: '3',
-     color: 'white',
-     textAlign: 'right',
-     marginRight: '10%',
-     '& ul': {
-       zIndex: '2',
-       textAlign: 'right',
-       listStyleType: 'none',
-       margin: '0px',
-     }
-   },
-   li: {
-     display: 'inline-block',
-     marginLeft: '3%',
-     '& a': {
-       color: 'white',
-       textDecoration: 'none',
-       marginRight: '10px',
-       padding: '10px',
-       '&:hover': {
-         background: '#3498db'
-       }
-     }
-   },
-   mainNavWrapper: {
-     background: 'rgba(0,0,0,1)',
-     width: '100%',
-     opacity: '1',
-     transition: 'width 2s ease',
-     padding: '10px',
-     position: 'fixed',
-     zIndex: 1,
-     '&.sticky': {
-       position: 'fixed',
-       top: '0px',
-       opacity: '1',
-       transition: 'opacity 2s ease',
-       padding: '10px',
-       zIndex: 1
-     },
-     '&.scrolling': {
-       opacity: '0',
-       position: 'fixed',
-       transition: 'opacity 30ms ease'
-     }
-   },
-   current: {
-     backgroundColor: '#3498db'
-   },
-   header: {
-     height: '670px',
-     backgroundImage: 'url(./img/sourceImages/neighborhood.jpg)',
-     backgroundRepeat: 'round',
-     width: '100%',
-     borderRadius: '0 0 0 85px',
-     backgroundSize: 'cover'
-   },
-   headerContent: {
-     paddingLeft: '10%',
-     paddingTop: '5%',
-     position: 'relative'
-   },
-   mainTitle: {
-     color: 'white',
-     lineHeight: '160%',
-     marginTop: '10%'
-   },
-   mainDescription: {
-     color: '#b6bab9',
-     lineHeight: '180%',
-     marginTop: '3%',
-     fontSize: '17px'
-   },
-   buttonWrapper: {
-     marginTop: '55px'
-   },
-   contactUs: {
-     backgroundColor: '#3498db',
-     color: 'white',
-     padding: '15px 65px',
-     border: 'none',
-     marginRight: '2%',
-     fontSize: '15px'
-   },
-   learnMore: {
-     backgroundColor: 'white',
-     color: 'black',
-     padding: '15px 65px',
-     border: 'none',
-     fontSize: '15px'
-   },
-   whiteBkg: {
-     backgroundColor: '#fefefe'
-   },
-   overlay: {
-     backgroundColor: 'black',
-     position: 'absolute',
-     opacity: '0.5',
-     width: '100%',
-     height: '670px',
-     borderRadius: '0 0 0 85px',
-   },
-   gridImg: {
-     width: '100%',
-     height: '96px',
-     background: 'url(./img/sourceImages/gridImg.jpg)',
-     backgroundSize: '100%',
-     margin: 0,
-     top: '-19px',
-     position: 'relative',
-     zIndex: '-1',
-     left: '161px'
-   },
-   gridWhiteBkg: {
-     backgroundColor: '#fefefe'
-   }
- },
- '@media (max-width: 600px)': {
-   li: {
-     display: 'none',
-   },
- },
- '@media (min-width: 32em)': {
-   whiteBkg: {
-     backgroundColor: "red"
-   }
- }
-
-}
  */
