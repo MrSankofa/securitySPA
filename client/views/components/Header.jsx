@@ -281,14 +281,26 @@ const Header = () => {
         width: '59%',
         marginRight: '24%',
         padding: '2%'
-      }
+      },
+      [theme.breakpoints.between('sm', 'md')]: {
+        backgroundColor: 'blue',
+      },
+      [theme.breakpoints.between('lg', 'xl')]: {
+        backgroundColor: 'green'
+      },
     },
     menu: {
       [theme.breakpoints.down('sm')]: {
         padding: '1%',
         background: 'black',
         display: 'flex'
-      }
+      },
+      [theme.breakpoints.between('sm', 'md')]: {
+        backgroundColor: 'blue',
+      },
+      [theme.breakpoints.between('lg', 'xl')]: {
+        display: 'none'
+      },
     },
     burgerNav: {
       background: 'url(./img/sourceImages/menuIcon.png) round',
@@ -341,14 +353,11 @@ const Header = () => {
   }, 2000);
 
   window.addEventListener('scroll', checkHeader);
+
   let toggle = -1;
   const openMenu = (e) => {
-    console.log('e: ', e);
-    console.log('Clicked menu')
     toggle *= -1;
-
     toggle === 1 ? document.querySelector('.makeStyles-mainNav-66 ul').classList.add('open') : document.querySelector('.makeStyles-mainNav-66 ul').classList.remove('open');
-
   }
 
   return (
