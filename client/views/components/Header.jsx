@@ -23,7 +23,20 @@ const Header = () => {
   const useStyles = makeStyles(theme => ({
     mainNav: {
       [theme.breakpoints.down('sm')]: {
-        backgroundColor: 'red',
+        '& ul': {
+          width: '100%',
+          overflow: 'hidden',
+          background: '#505050',
+          height: 0,
+          padding: '0%',
+          margin: 0,
+          listStyleType: 'none',
+          transition: 'height 1s ease'
+        },
+        '& ul.open': {
+          height: 'auto',
+          transition: 'height 1s ease'
+        }
       },
       [theme.breakpoints.between('sm', 'md')]: {
         backgroundColor: 'blue',
@@ -44,7 +57,18 @@ const Header = () => {
     },
     li: {
       [theme.breakpoints.down('sm')]: {
-        backgroundColor: 'red',
+        borderBottomStyle: 'groove',
+        borderBottomColor: 'lightslategrey',
+        textAlign: 'center',
+        padding: '2%',
+        '& a': {
+          color: 'white',
+          textDecoration: 'none',
+
+          '&:hover': {
+            background: '#3498db'
+          }
+        }
       },
       [theme.breakpoints.between('sm', 'md')]: {
         backgroundColor: 'blue',
@@ -66,7 +90,7 @@ const Header = () => {
     },
     mainNavWrapper: {
       [theme.breakpoints.down('sm')]: {
-        backgroundColor: 'red',
+        background: 'rgba(0, 0, 0, 1)'
       },
       [theme.breakpoints.between('sm', 'md')]: {
         backgroundColor: 'blue',
@@ -100,7 +124,9 @@ const Header = () => {
     },
     header: {
       [theme.breakpoints.down('sm')]: {
-        backgroundColor: 'red',
+        backgroundImage: 'url(./img/sourceImages/neighborhood.jpg)',
+        backgroundRepeat: 'round',
+        width: '100%',
       },
       [theme.breakpoints.between('sm', 'md')]: {
         backgroundColor: 'blue',
@@ -117,7 +143,7 @@ const Header = () => {
     },
     headerContent: {
       [theme.breakpoints.down('sm')]: {
-        backgroundColor: 'red',
+
       },
       [theme.breakpoints.between('sm', 'md')]: {
         backgroundColor: 'blue',
@@ -131,7 +157,8 @@ const Header = () => {
     },
     mainTitle: {
       [theme.breakpoints.down('sm')]: {
-        backgroundColor: 'red',
+        color: 'white',
+        margin: 0,
       },
       [theme.breakpoints.between('sm', 'md')]: {
         backgroundColor: 'blue',
@@ -145,7 +172,7 @@ const Header = () => {
     },
     mainDescription: {
       [theme.breakpoints.down('sm')]: {
-        backgroundColor: 'red',
+        color: '#b6bab9',
       },
       [theme.breakpoints.between('sm', 'md')]: {
         backgroundColor: 'blue',
@@ -160,7 +187,7 @@ const Header = () => {
     },
     buttonWrapper: {
       [theme.breakpoints.down('sm')]: {
-        backgroundColor: 'red',
+
       },
       [theme.breakpoints.between('sm', 'md')]: {
         backgroundColor: 'blue',
@@ -171,7 +198,9 @@ const Header = () => {
     },
     contactUs: {
       [theme.breakpoints.down('sm')]: {
-        backgroundColor: 'red',
+        backgroundColor: '#3498db',
+        color: 'white',
+        border: 'none',
       },
       [theme.breakpoints.between('sm', 'md')]: {
         backgroundColor: 'blue',
@@ -188,7 +217,9 @@ const Header = () => {
     },
     learnMore: {
       [theme.breakpoints.down('sm')]: {
-        backgroundColor: 'red',
+        backgroundColor: 'white',
+        color: 'black',
+        border: 'none',
       },
       [theme.breakpoints.between('sm', 'md')]: {
         backgroundColor: 'blue',
@@ -207,7 +238,7 @@ const Header = () => {
     },
     overlay: {
       [theme.breakpoints.down('sm')]: {
-        backgroundColor: 'red',
+
       },
       [theme.breakpoints.between('sm', 'md')]: {
         backgroundColor: 'blue',
@@ -224,7 +255,7 @@ const Header = () => {
     },
     gridImg: {
       [theme.breakpoints.down('sm')]: {
-        backgroundColor: 'red',
+
       },
       [theme.breakpoints.between('sm', 'md')]: {
         backgroundColor: 'blue',
@@ -244,6 +275,26 @@ const Header = () => {
     },
     gridWhiteBkg: {
       backgroundColor: '#fefefe'
+    },
+    logo: {
+      [theme.breakpoints.down('sm')]: {
+        width: '59%',
+        marginRight: '24%',
+        padding: '2%'
+      }
+    },
+    menu: {
+      [theme.breakpoints.down('sm')]: {
+        padding: '1%',
+        background: 'black',
+        display: 'flex'
+      }
+    },
+    burgerNav: {
+      background: 'url(./img/sourceImages/menuIcon.png) round',
+      display: 'block',
+      height: '40px',
+      width: '13%'
     }
 
   }));
@@ -290,12 +341,27 @@ const Header = () => {
   }, 2000);
 
   window.addEventListener('scroll', checkHeader);
+  let toggle = -1;
+  const openMenu = (e) => {
+    console.log('e: ', e);
+    console.log('Clicked menu')
+    toggle *= -1;
+
+    toggle === 1 ? document.querySelector('.makeStyles-mainNav-66 ul').classList.add('open') : document.querySelector('.makeStyles-mainNav-66 ul').classList.remove('open');
+
+  }
 
   return (
     <React.Fragment>
       <div className={classes.mainNavWrapper}>
 
         <nav className={classes.mainNav}>
+          <div className={classes.menu}>
+            <div className={classes.logo}>
+              <img src="./img/logoDesign/LargeLogo.png" width="100%" height="100%" />
+            </div>
+            <a className={classes.burgerNav} onClick={openMenu}></a>
+          </div>
           <ul className={classes.ul}>
             <li className={classes.li}><a href="#" >home</a></li>
             <li className={classes.li}><a href="#">about us</a></li>
