@@ -12,24 +12,24 @@ menu{
 	font: inherit;
 	vertical-align: baseline;
 } */
-.makeStyles-mainNavWrapper-3.sticky{
+/* .makeStyles-mainNavWrapper-61.sticky{
   position: fixed;
   top: 0px;
   opacity: 1;
   transition: opacity 1s ease;
   padding: 10px;
 }
-.makeStyles-mainNavWrapper-3{
+.makeStyles-mainNavWrapper-61{
   width: 100%;
   opacity: 1;
   transition: width 2s ease;
   padding: 10px;
 }
-.makeStyles-mainNavWrapper-3.scrolling{
+.makeStyles-mainNavWrapper-61.scrolling{
   opacity: 0;
   position: absolute;
   transition: opacity 1s ease;
-}
+} */
 
 body {
   font-family: sans-serif;
@@ -37,27 +37,27 @@ body {
   background: #eee;
 }
 
-.makeStyles-mainNav-2 ul {
+/* .makeStyles-mainNav-60 ul {
   z-index: 2;
   text-align: right;
   list-style-type: none;
   margin: 0px;
 }
-.makeStyles-mainNav-2 ul a {
+.makeStyles-mainNav-60 ul a {
   color: white;
   text-decoration: none;
   margin-right: 10px;
   padding: 10px;
 }
 
-.makeStyles-mainNav-2 ul a:hover {
+.makeStyles-mainNav-60 ul a:hover {
   background-color: #3498db;
 }
 
-.makeStyles-mainNav-2 li {
+.makeStyles-mainNav-60 li {
   display: inline-block;
   margin-left: 3%;
-}
+} */
 
 h1 {
   font-family: 'publica sans bold','Segoe UI', Tahoma, Geneva, Verdana, sans-serif
@@ -71,28 +71,28 @@ h1 {
   background-image: url('../img/sourceImages/jason-briscoe-UV81E0oXXWQ-unsplash.jpg')
 }
 
-#gridImg {
+/* #gridImg {
   background-image: url('../img/sourceImages/gridImg.jpg');
-}
+} */
 
 #sofa {
   background-image: url('../img/sourceImages/sofa.jpg')
 }
 
-.makeStyles-cardSection-29 h1 {
+/* .makeStyles-cardSection-93 h1 {
   text-align: center;
   line-height: 155%;
   margin-bottom: 7%;
 }
 
-.makeStyles-cardSection-29 h1 span {
+.makeStyles-cardSection-93 h1 span {
   color: #3498db
 }
 
-.makeStyles-packageButtons-30 button {
+.makeStyles-packageButtons-94 button {
   margin: 1%;
     width: 30%;
     padding: 2%;
     background-color: #fefefe;
     border: none;
-}
+} */
