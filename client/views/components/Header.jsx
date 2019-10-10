@@ -324,15 +324,15 @@ const Header = () => {
   let stopped = [];
 
   const checkHeader = _.throttle(() => {
-    if (document.querySelector('.makeStyles-mainNavWrapper-68') !== null) {
+    if (document.querySelector('.makeStyles-mainNavWrapper-69') !== null) {
       stopped[0] = false;
       // detect scroll position
       let scrollPosition = [Math.round(window.scrollY)];
 
       // determine if scrolling
       if (stopped[0] === false) {
-        document.querySelector('.makeStyles-mainNavWrapper-68').classList.add('scrolling');
-        document.querySelector('.makeStyles-mainNavWrapper-68').classList.remove('sticky')
+        document.querySelector('.makeStyles-mainNavWrapper-69').classList.add('scrolling');
+        document.querySelector('.makeStyles-mainNavWrapper-69').classList.remove('sticky')
       }
       console.log('Scrolling has stopped: ', stopped);
       console.log('scrollPosition: ', scrollPosition);
@@ -345,11 +345,11 @@ const Header = () => {
           console.log('Scrolling has stopped: ', stopped);
           if (stopped[0] === true && scrollPosition[0] > 670) {
             console.log('triggering if statement');
-            document.querySelector('.makeStyles-mainNavWrapper-68').classList.add('sticky');
-            document.querySelector('.makeStyles-mainNavWrapper-68').classList.remove('scrolling')
+            document.querySelector('.makeStyles-mainNavWrapper-69').classList.add('sticky');
+            document.querySelector('.makeStyles-mainNavWrapper-69').classList.remove('scrolling')
           } else {
-            document.querySelector('.makeStyles-mainNavWrapper-68').classList.remove('scrolling')
-            document.querySelector('.makeStyles-mainNavWrapper-68').classList.remove('sticky')
+            document.querySelector('.makeStyles-mainNavWrapper-69').classList.remove('scrolling')
+            document.querySelector('.makeStyles-mainNavWrapper-69').classList.remove('sticky')
           }
         }, 4000)
 
@@ -364,7 +364,7 @@ const Header = () => {
   let toggle = -1;
   const openMenu = (e) => {
     toggle *= -1;
-    toggle === 1 ? document.querySelector('.makeStyles-mainNav-66 ul').classList.add('open') : document.querySelector('.makeStyles-mainNav-66 ul').classList.remove('open');
+    toggle === 1 ? document.querySelector('.makeStyles-mainNav-67 ul').classList.add('open') : document.querySelector('.makeStyles-mainNav-67 ul').classList.remove('open');
   }
 
   return (

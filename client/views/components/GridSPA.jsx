@@ -89,38 +89,41 @@ const GridSPA = (props) => {
     whiteBkg: {
       backgroundColor: '#fefefe'
     },
+    packageImg: {
+
+    }
   }));
   const classes = useStyles();
   return (
     <div className={classes.whiteBkg}>
       <div className={classes.container}>
         <div className={classes.item}>
-          <img src="./img/sourceImages/camera.jpg" height="auto" width="100%" />
+          <img src="./img/sourceImages/camera.jpg" height="auto" className={classes.packageImg} />
           <h2>Your Next Title</h2>
           <p>Lorem ipsum dolor sit amet,<br></br> consectetur adipiscing elit, sed<br></br>do eiusmod tempor.</p>
         </div>
         <div className={classes.item}>
-          <img src="./img/sourceImages/camera.jpg" height="auto" width="100%" />
+          <img src="./img/sourceImages/camera.jpg" height="auto" className={classes.packageImg} />
           <h2>Your Next Title</h2>
           <p>Lorem ipsum dolor sit amet,<br></br> consectetur adipiscing elit, sed<br></br>do eiusmod tempor.</p>
         </div>
         <div className={classes.item}>
-          <img src="./img/sourceImages/camera.jpg" height="auto" width="100%" />
+          <img src="./img/sourceImages/camera.jpg" height="auto" className={classes.packageImg} />
           <h2>Your Next Title</h2>
           <p>Lorem ipsum dolor sit amet,<br></br> consectetur adipiscing elit, sed<br></br>do eiusmod tempor.</p>
         </div>
         <div className={classes.item}>
-          <img src="./img/sourceImages/camera.jpg" height="auto" width="100%" />
+          <img src="./img/sourceImages/camera.jpg" height="auto" className={classes.packageImg} />
           <h2>Your Next Title</h2>
           <p>Lorem ipsum dolor sit amet,<br></br> consectetur adipiscing elit, sed<br></br>do eiusmod tempor.</p>
         </div>
         <div className={classes.item}>
-          <img src="./img/sourceImages/camera.jpg" height="auto" width="100%" />
+          <img src="./img/sourceImages/camera.jpg" height="auto" className={classes.packageImg} />
           <h2>Your Next Title</h2>
           <p>Lorem ipsum dolor sit amet,<br></br> consectetur adipiscing elit, sed<br></br>do eiusmod tempor.</p>
         </div>
         <div className={classes.item}>
-          <img src="./img/sourceImages/camera.jpg" height="auto" width="100%" />
+          <img src="./img/sourceImages/camera.jpg" height="auto" className={classes.packageImg} />
           <h2>Your Next Title</h2>
           <p>Lorem ipsum dolor sit amet,<br></br> consectetur adipiscing elit, sed<br></br>do eiusmod tempor.</p>
         </div>

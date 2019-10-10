@@ -6,7 +6,8 @@ const Sections = (props) => {
   const useStyles = makeStyles(theme => ({
     sectionWrapper: {
       [theme.breakpoints.down('sm')]: {
-        backgroundColor: 'red',
+        display: 'flex',
+        height: '100%'
       },
       [theme.breakpoints.between('sm', 'md')]: {
         backgroundColor: 'blue',
@@ -19,7 +20,8 @@ const Sections = (props) => {
     },
     section1: {
       [theme.breakpoints.down('sm')]: {
-        backgroundColor: 'red',
+        height: '100%',
+        backgroundColor: '#fefefe'
       },
       [theme.breakpoints.between('sm', 'md')]: {
         backgroundColor: 'blue',
@@ -32,7 +34,8 @@ const Sections = (props) => {
     },
     section2: {
       [theme.breakpoints.down('sm')]: {
-        backgroundColor: 'red',
+        height: '100%',
+        backgroundColor: '#fafafc'
       },
       [theme.breakpoints.between('sm', 'md')]: {
         backgroundColor: 'blue',
@@ -45,7 +48,8 @@ const Sections = (props) => {
     },
     section3: {
       [theme.breakpoints.down('sm')]: {
-        backgroundColor: 'red',
+        eight: '100%',
+        backgroundColor: '#fefefe'
       },
       [theme.breakpoints.between('sm', 'md')]: {
         backgroundColor: 'blue',
@@ -58,7 +62,9 @@ const Sections = (props) => {
     },
     contentLeft: {
       [theme.breakpoints.down('sm')]: {
-        backgroundColor: 'red',
+        width: '100%',
+        paddingLeft: '3%',
+        paddingTop: '2%'
       },
       [theme.breakpoints.between('sm', 'md')]: {
         backgroundColor: 'blue',
@@ -73,7 +79,12 @@ const Sections = (props) => {
     },
     contentImgRight: {
       [theme.breakpoints.down('sm')]: {
-        backgroundColor: 'red',
+        width: '44%',
+        background: 'no-repeat center/176%',
+        marginTop: '17%',
+        borderRadius: '26% 0% 0% 5%',
+        height: '17vh',
+        padding: '0% 3% 0% 0%'
       },
       [theme.breakpoints.between('sm', 'md')]: {
         backgroundColor: 'blue',
@@ -90,7 +101,10 @@ const Sections = (props) => {
     },
     contentRight: {
       [theme.breakpoints.down('sm')]: {
-        backgroundColor: 'red',
+        marginTop: '18%',
+        marginLeft: '10%',
+        width: '50%',
+        padding: '0% 7%'
       },
       [theme.breakpoints.between('sm', 'md')]: {
         backgroundColor: 'blue',
@@ -105,7 +119,12 @@ const Sections = (props) => {
     },
     contentImgLeft: {
       [theme.breakpoints.down('sm')]: {
-        backgroundColor: 'red',
+        width: '53%',
+        height: '82%',
+        padding: '0% 3% 0% 0%',
+        background: 'no-repeat center/102%',
+        marginTop: '8%',
+        borderRadius: '0% 21% 5% 0%'
       },
       [theme.breakpoints.between('sm', 'md')]: {
         backgroundColor: 'blue',
@@ -125,7 +144,10 @@ const Sections = (props) => {
     },
     featureSectionText: {
       [theme.breakpoints.down('sm')]: {
-        backgroundColor: 'red',
+        color: '#3390e9',
+        fontWeight: 'bold',
+        fontSize: '16px',
+        width: '100%'
       },
       [theme.breakpoints.between('sm', 'md')]: {
         backgroundColor: 'blue',
@@ -139,7 +161,9 @@ const Sections = (props) => {
     },
     featureSectionH1: {
       [theme.breakpoints.down('sm')]: {
-        backgroundColor: 'red',
+        color: '#464647',
+        lineHeight: '125%',
+        fontSize: '175%'
       },
       [theme.breakpoints.between('sm', 'md')]: {
         backgroundColor: 'blue',
@@ -152,7 +176,10 @@ const Sections = (props) => {
     },
     featureSectionP: {
       [theme.breakpoints.down('sm')]: {
-        backgroundColor: 'red',
+        ontSize: '144%',
+        color: '#cacacf',
+        lineHeight: '135%',
+        display: 'flex'
       },
       [theme.breakpoints.between('sm', 'md')]: {
         backgroundColor: 'blue',
