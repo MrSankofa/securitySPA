@@ -14,15 +14,15 @@ const ReviewList = (props) => {
         backgroundColor: 'blue',
       },
       [theme.breakpoints.between('lg', 'xl')]: {
-
+        position: 'relative',
+        margin: '8% auto',
+        height: 'auto',
+        overflow: 'hidden',
+        whiteSpace: 'nowrap',
+        textAlign: 'center',
+        width: '686px'
       },
-      position: 'relative',
-      margin: '8% auto',
-      height: 'auto',
-      overflow: 'hidden',
-      whiteSpace: 'nowrap',
-      textAlign: 'center',
-      width: '686px'
+
     },
     reviewWrapper: {
       [theme.breakpoints.down('sm')]: {
@@ -32,14 +32,14 @@ const ReviewList = (props) => {
         backgroundColor: 'blue',
       },
       [theme.breakpoints.between('lg', 'xl')]: {
-
+        textAlign: 'center',
+        position: 'relative',
+        width: '100%',
+        height: '100%',
+        textAlign: 'center',
+        margin: '0 auto'
       },
-      textAlign: 'center',
-      position: 'relative',
-      width: '100%',
-      height: '100%',
-      textAlign: 'center',
-      margin: '0 auto'
+
     },
     avatarSlider: {
       [theme.breakpoints.down('sm')]: {
@@ -49,11 +49,11 @@ const ReviewList = (props) => {
         backgroundColor: 'blue',
       },
       [theme.breakpoints.between('lg', 'xl')]: {
-
+        width: '100px',
+        margin: '0 auto',
+        overflow: 'hidden',
       },
-      width: '100px',
-      margin: '0 auto',
-      overflow: 'hidden',
+
     },
     avatarWrapper: {
       [theme.breakpoints.down('sm')]: {
@@ -63,11 +63,11 @@ const ReviewList = (props) => {
         backgroundColor: 'blue',
       },
       [theme.breakpoints.between('lg', 'xl')]: {
-
+        width: '100 %',
+        height: '100 %',
+        display: 'inline-block'
       },
-      width: '100 %',
-      height: '100 %',
-      display: 'inline-block'
+
     },
     avatar: {
       [theme.breakpoints.down('sm')]: {
@@ -77,9 +77,9 @@ const ReviewList = (props) => {
         backgroundColor: 'blue',
       },
       [theme.breakpoints.between('lg', 'xl')]: {
-
+        borderRadius: '50%'
       },
-      borderRadius: '50%'
+
     }
   }));
   const classes = useStyles();

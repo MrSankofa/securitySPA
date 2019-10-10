@@ -51,16 +51,16 @@ const Cards = () => {
         backgroundColor: 'blue',
       },
       [theme.breakpoints.between('lg', 'xl')]: {
-
-      },
-      '& h1': {
-        textAlign: 'center',
-        lineHeight: '155%',
-        marginBottom: '7%',
-        '& span': {
-          color: '#3498db'
+        '& h1': {
+          textAlign: 'center',
+          lineHeight: '155%',
+          marginBottom: '7%',
+          '& span': {
+            color: '#3498db'
+          }
         }
-      }
+      },
+
     },
     packageButtons: {
       [theme.breakpoints.down('sm')]: {
@@ -70,18 +70,18 @@ const Cards = () => {
         backgroundColor: 'blue',
       },
       [theme.breakpoints.between('lg', 'xl')]: {
-
-      },
-      backgroundColor: '#fefefe',
-      width: '28%',
-      margin: '3% auto',
-      '& button': {
-        margin: '1%',
-        width: '30%',
-        padding: '2%',
         backgroundColor: '#fefefe',
-        border: 'none'
-      }
+        width: '28%',
+        margin: '3% auto',
+        '& button': {
+          margin: '1%',
+          width: '30%',
+          padding: '2%',
+          backgroundColor: '#fefefe',
+          border: 'none'
+        }
+      },
+
     },
     packageFeaturesUL: {
 
@@ -94,10 +94,10 @@ const Cards = () => {
         backgroundColor: 'blue',
       },
       [theme.breakpoints.between('lg', 'xl')]: {
-
+        margin: '0 auto 6%',
+        width: '62%'
       },
-      margin: '0 auto 6%',
-      width: '62%'
+
     }
 
   }));

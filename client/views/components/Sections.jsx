@@ -79,14 +79,14 @@ const Sections = (props) => {
         backgroundColor: 'blue',
       },
       [theme.breakpoints.between('lg', 'xl')]: {
-
+        width: '44%',
+        background: 'no-repeat center/176%',
+        marginTop: '8%',
+        borderRadius: '26% 0% 0% 5%',
+        height: '82%',
+        padding: '0% 3% 0% 0%'
       },
-      width: '44%',
-      background: 'no-repeat center/176%',
-      marginTop: '8%',
-      borderRadius: '26% 0% 0% 5%',
-      height: '82%',
-      padding: '0% 3% 0% 0%'
+
     },
     contentRight: {
       [theme.breakpoints.down('sm')]: {
@@ -96,12 +96,12 @@ const Sections = (props) => {
         backgroundColor: 'blue',
       },
       [theme.breakpoints.between('lg', 'xl')]: {
-
+        marginTop: '18%',
+        marginLeft: '10%',
+        width: '50%',
+        padding: '0% 7%'
       },
-      marginTop: '18%',
-      marginLeft: '10%',
-      width: '50%',
-      padding: '0% 7%'
+
     },
     contentImgLeft: {
       [theme.breakpoints.down('sm')]: {
@@ -111,14 +111,14 @@ const Sections = (props) => {
         backgroundColor: 'blue',
       },
       [theme.breakpoints.between('lg', 'xl')]: {
-
+        width: '53%',
+        height: '82%',
+        padding: '0% 3% 0% 0%',
+        background: 'no-repeat center/102%',
+        marginTop: '8%',
+        borderRadius: '0% 21% 5% 0%'
       },
-      width: '53%',
-      height: '82%',
-      padding: '0% 3% 0% 0%',
-      background: 'no-repeat center/102%',
-      marginTop: '8%',
-      borderRadius: '0% 21% 5% 0%'
+
     },
     whiteBkg: {
       backgroundColor: '#fefefe'
@@ -131,11 +131,11 @@ const Sections = (props) => {
         backgroundColor: 'blue',
       },
       [theme.breakpoints.between('lg', 'xl')]: {
-
+        color: '#3390e9',
+        fontWeight: 'bold',
+        fontSize: '18px'
       },
-      color: '#3390e9',
-      fontWeight: 'bold',
-      fontSize: '18px'
+
     },
     featureSectionH1: {
       [theme.breakpoints.down('sm')]: {
@@ -145,10 +145,10 @@ const Sections = (props) => {
         backgroundColor: 'blue',
       },
       [theme.breakpoints.between('lg', 'xl')]: {
-
+        color: '#464647',
+        lineHeight: '174%'
       },
-      color: '#464647',
-      lineHeight: '174%'
+
     },
     featureSectionP: {
       [theme.breakpoints.down('sm')]: {
@@ -158,11 +158,11 @@ const Sections = (props) => {
         backgroundColor: 'blue',
       },
       [theme.breakpoints.between('lg', 'xl')]: {
-
+        fontSize: '144%',
+        color: '#cacacf',
+        lineHeight: '135%'
       },
-      fontSize: '144%',
-      color: '#cacacf',
-      lineHeight: '135%'
+
     },
   }));
 

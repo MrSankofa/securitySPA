@@ -12,14 +12,14 @@ const Package = props => {
         backgroundColor: 'blue',
       },
       [theme.breakpoints.between('lg', 'xl')]: {
-
+        width: '275px',
+        backgroundColor: '#fefefe',
+        display: 'inline-block',
+        margin: '0 10px',
+        paddingBottom: '4%',
+        height: '600px'
       },
-      width: '275px',
-      backgroundColor: '#fefefe',
-      display: 'inline-block',
-      margin: '0 10px',
-      paddingBottom: '4%',
-      height: '600px'
+
 
     },
     purchase: {

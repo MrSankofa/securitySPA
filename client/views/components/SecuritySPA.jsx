@@ -7,8 +7,6 @@ import Card from './Cards.jsx';
 import ReviewList from './ReviewList.jsx';
 import Contact from './Contact.jsx';
 
-
-
 const SecuritySPA = ({ reviews, slides }) => {
     const useStyles = makeStyles(theme => ({
         root: {

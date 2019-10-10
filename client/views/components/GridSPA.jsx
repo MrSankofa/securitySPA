@@ -62,11 +62,11 @@ const GridSPA = (props) => {
         backgroundColor: 'blue',
       },
       [theme.breakpoints.between('lg', 'xl')]: {
-
+        margin: '0 74px',
+        backgroundColor: '#fefefe',
+        padding: '5% 0%'
       },
-      margin: '0 74px',
-      backgroundColor: '#fefefe',
-      padding: '5% 0%'
+
 
     },
     item: {
@@ -77,14 +77,14 @@ const GridSPA = (props) => {
         backgroundColor: 'blue',
       },
       [theme.breakpoints.between('lg', 'xl')]: {
-
+        width: '33.3%',
+        height: '5%',
+        display: 'inline-block',
+        margin: '0 auto',
+        textAlign: 'center',
+        paddingTop: '8%'
       },
-      width: '33.3%',
-      height: '5%',
-      display: 'inline-block',
-      margin: '0 auto',
-      textAlign: 'center',
-      paddingTop: '8%'
+
     },
     whiteBkg: {
       backgroundColor: '#fefefe'

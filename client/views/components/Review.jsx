@@ -12,12 +12,12 @@ const Review = props => {
         backgroundColor: 'blue',
       },
       [theme.breakpoints.between('lg', 'xl')]: {
-
+        width: '686px',
+        display: 'inline-block',
+        fontSize: '23px',
+        color: '#8e8e8e'
       },
-      width: '686px',
-      display: 'inline-block',
-      fontSize: '23px',
-      color: '#8e8e8e'
+
     },
     text: {
       [theme.breakpoints.down('sm')]: {
@@ -27,9 +27,9 @@ const Review = props => {
         backgroundColor: 'blue',
       },
       [theme.breakpoints.between('lg', 'xl')]: {
-
+        whiteSpace: 'pre-line'
       },
-      whiteSpace: 'pre-line'
+
     }
   }));
 

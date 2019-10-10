@@ -127,6 +127,7 @@ const Header = () => {
         backgroundImage: 'url(./img/sourceImages/neighborhood.jpg)',
         backgroundRepeat: 'round',
         width: '100%',
+        header: '283px'
       },
       [theme.breakpoints.between('sm', 'md')]: {
         backgroundColor: 'blue',
@@ -143,7 +144,9 @@ const Header = () => {
     },
     headerContent: {
       [theme.breakpoints.down('sm')]: {
-
+        paddingLeft: '2%',
+        paddingTop: '2%',
+        position: 'relative'
       },
       [theme.breakpoints.between('sm', 'md')]: {
         backgroundColor: 'blue',
@@ -187,7 +190,7 @@ const Header = () => {
     },
     buttonWrapper: {
       [theme.breakpoints.down('sm')]: {
-
+        padding: '4%'
       },
       [theme.breakpoints.between('sm', 'md')]: {
         backgroundColor: 'blue',
@@ -238,7 +241,11 @@ const Header = () => {
     },
     overlay: {
       [theme.breakpoints.down('sm')]: {
-
+        backgroundColor: 'black',
+        position: 'absolute',
+        opacity: '0.5',
+        width: '100%',
+        height: '273px',
       },
       [theme.breakpoints.between('sm', 'md')]: {
         backgroundColor: 'blue',
