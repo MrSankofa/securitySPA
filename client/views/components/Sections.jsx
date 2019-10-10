@@ -12,10 +12,10 @@ const Sections = (props) => {
         backgroundColor: 'blue',
       },
       [theme.breakpoints.between('lg', 'xl')]: {
-
+        display: 'flex',
+        height: '100%'
       },
-      display: 'flex',
-      height: '100%'
+
     },
     section1: {
       [theme.breakpoints.down('sm')]: {
@@ -25,10 +25,10 @@ const Sections = (props) => {
         backgroundColor: 'blue',
       },
       [theme.breakpoints.between('lg', 'xl')]: {
-
+        height: '610px',
+        backgroundColor: '#fefefe'
       },
-      height: '610px',
-      backgroundColor: '#fefefe'
+
     },
     section2: {
       [theme.breakpoints.down('sm')]: {
@@ -38,10 +38,10 @@ const Sections = (props) => {
         backgroundColor: 'blue',
       },
       [theme.breakpoints.between('lg', 'xl')]: {
-
+        height: '610px',
+        backgroundColor: '#fafafc'
       },
-      height: '610px',
-      backgroundColor: '#fafafc'
+
     },
     section3: {
       [theme.breakpoints.down('sm')]: {
@@ -51,10 +51,10 @@ const Sections = (props) => {
         backgroundColor: 'blue',
       },
       [theme.breakpoints.between('lg', 'xl')]: {
-
+        height: '660px',
+        backgroundColor: '#fefefe'
       },
-      height: '660px',
-      backgroundColor: '#fefefe'
+
     },
     contentLeft: {
       [theme.breakpoints.down('sm')]: {
@@ -64,12 +64,12 @@ const Sections = (props) => {
         backgroundColor: 'blue',
       },
       [theme.breakpoints.between('lg', 'xl')]: {
-
+        marginTop: '18%',
+        marginLeft: '10%',
+        width: '50%',
+        padding: '0% 7%'
       },
-      marginTop: '18%',
-      marginLeft: '10%',
-      width: '50%',
-      padding: '0% 7%'
+
     },
     contentImgRight: {
       [theme.breakpoints.down('sm')]: {

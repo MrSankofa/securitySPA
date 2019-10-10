@@ -127,7 +127,7 @@ const Header = () => {
         backgroundImage: 'url(./img/sourceImages/neighborhood.jpg)',
         backgroundRepeat: 'round',
         width: '100%',
-        header: '283px'
+        height: '273px'
       },
       [theme.breakpoints.between('sm', 'md')]: {
         backgroundColor: 'blue',
@@ -324,15 +324,15 @@ const Header = () => {
   let stopped = [];
 
   const checkHeader = _.throttle(() => {
-    if (document.querySelector('.makeStyles-mainNavWrapper-61') !== null) {
+    if (document.querySelector('.makeStyles-mainNavWrapper-68') !== null) {
       stopped[0] = false;
       // detect scroll position
       let scrollPosition = [Math.round(window.scrollY)];
 
       // determine if scrolling
       if (stopped[0] === false) {
-        document.querySelector('.makeStyles-mainNavWrapper-61').classList.add('scrolling');
-        document.querySelector('.makeStyles-mainNavWrapper-61').classList.remove('sticky')
+        document.querySelector('.makeStyles-mainNavWrapper-68').classList.add('scrolling');
+        document.querySelector('.makeStyles-mainNavWrapper-68').classList.remove('sticky')
       }
       console.log('Scrolling has stopped: ', stopped);
       console.log('scrollPosition: ', scrollPosition);
@@ -345,11 +345,11 @@ const Header = () => {
           console.log('Scrolling has stopped: ', stopped);
           if (stopped[0] === true && scrollPosition[0] > 670) {
             console.log('triggering if statement');
-            document.querySelector('.makeStyles-mainNavWrapper-61').classList.add('sticky');
-            document.querySelector('.makeStyles-mainNavWrapper-61').classList.remove('scrolling')
+            document.querySelector('.makeStyles-mainNavWrapper-68').classList.add('sticky');
+            document.querySelector('.makeStyles-mainNavWrapper-68').classList.remove('scrolling')
           } else {
-            document.querySelector('.makeStyles-mainNavWrapper-61').classList.remove('scrolling')
-            document.querySelector('.makeStyles-mainNavWrapper-61').classList.remove('sticky')
+            document.querySelector('.makeStyles-mainNavWrapper-68').classList.remove('scrolling')
+            document.querySelector('.makeStyles-mainNavWrapper-68').classList.remove('sticky')
           }
         }, 4000)
 
