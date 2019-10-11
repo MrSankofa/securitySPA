@@ -7,7 +7,7 @@ import Card from './Cards.jsx';
 import ReviewList from './ReviewList.jsx';
 import Contact from './Contact.jsx';
 
-const SecuritySPA = ({ reviews, slides }) => {
+const SecuritySPA = ({ reviews, slides, packages, getPackage, defaultPackage }) => {
     const useStyles = makeStyles(theme => ({
         root: {
             width: '100%'
@@ -20,8 +20,7 @@ const SecuritySPA = ({ reviews, slides }) => {
         <div className={classes.root}>
             <Header />
             <Sections />
-            <GridSPA />
-            <Card />
+            <Card packages={packages} getPackage={getPackage} defaultPackage={defaultPackage} />
             {
                 slides !== 0 ? (<ReviewList reviews={reviews} slides={slides} />) : <div></div>
             }
