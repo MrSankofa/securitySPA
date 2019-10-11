@@ -5,14 +5,14 @@ import { makeStyles } from '@material-ui/core/styles';
 const Package = props => {
   const useStyles = makeStyles(theme => ({
     package: {
-      [theme.breakpoints.down('sm')]: {
-        backgroundColor: 'red',
-      },
-      [theme.breakpoints.between('sm', 'md')]: {
-        backgroundColor: 'blue',
-      },
-      [theme.breakpoints.between('lg', 'xl')]: {
+      [theme.breakpoints.down('md')]: {
         width: '275px',
+        backgroundColor: '#fefefe',
+        margin: '3% auto',
+        height: '600px'
+      },
+      [theme.breakpoints.between('md', 'xl')]: {
+        width: '30%',
         backgroundColor: '#fefefe',
         display: 'inline-block',
         margin: '0 10px',
@@ -23,89 +23,85 @@ const Package = props => {
 
     },
     purchase: {
-      [theme.breakpoints.down('sm')]: {
-        backgroundColor: 'red',
-      },
-      [theme.breakpoints.between('sm', 'md')]: {
-        backgroundColor: 'blue',
+      [theme.breakpoints.down('md')]: {
+        width: '100px',
+        height: '34px',
+        backgroundColor: 'darkslategray',
+        color: 'white'
       },
       [theme.breakpoints.between('lg', 'xl')]: {
-
+        width: '100px',
+        height: '34px',
+        backgroundColor: 'darkslategray',
+        color: 'white'
       },
-      width: '100px',
-      height: '34px',
-      backgroundColor: 'darkslategray',
-      color: 'white'
+
     },
     learnMore: {
-      [theme.breakpoints.down('sm')]: {
-        backgroundColor: 'red',
-      },
-      [theme.breakpoints.between('sm', 'md')]: {
-        backgroundColor: 'blue',
+      [theme.breakpoints.down('md')]: {
+        borderColor: 'darkslategrey',
+        width: '100px',
+        height: '34px',
+        marginLeft: '10px'
       },
       [theme.breakpoints.between('lg', 'xl')]: {
-
+        borderColor: 'darkslategrey',
+        width: '100px',
+        height: '34px',
+        marginLeft: '10px'
       },
-      borderColor: 'darkslategrey',
-      width: '100px',
-      height: '34px',
-      marginLeft: '10px'
+
     },
     packageTitle: {
-      [theme.breakpoints.down('sm')]: {
-        backgroundColor: 'red',
-      },
-      [theme.breakpoints.between('sm', 'md')]: {
-        backgroundColor: 'blue',
+      [theme.breakpoints.down('md')]: {
+        padding: '0 8%'
       },
       [theme.breakpoints.between('lg', 'xl')]: {
-
+        textAlign: 'center'
       },
-      textAlign: 'center'
+
     },
     packageText: {
-      [theme.breakpoints.down('sm')]: {
-        backgroundColor: 'red',
-      },
-      [theme.breakpoints.between('sm', 'md')]: {
-        backgroundColor: 'blue',
+      [theme.breakpoints.down('md')]: {
+        padding: '0 8%'
       },
       [theme.breakpoints.between('lg', 'xl')]: {
-
+        textAlign: 'center',
+        color: '#9d9ea6',
+        lineHeight: '130%'
       },
-      textAlign: 'center',
-      color: '#9d9ea6',
-      lineHeight: '130%'
+
     },
     packageFeaturesLi: {
-      [theme.breakpoints.down('sm')]: {
-        backgroundColor: 'red',
-      },
-      [theme.breakpoints.between('sm', 'md')]: {
-        backgroundColor: 'blue',
+      [theme.breakpoints.down('md')]: {
+        padding: '3%',
+        fontSize: '15px',
+        color: 'darkslategrey',
+        fontWeight: 'bold',
+        lineHeight: '150%'
       },
       [theme.breakpoints.between('lg', 'xl')]: {
-
+        padding: '3%',
+        fontSize: '15px',
+        color: 'darkslategrey',
+        fontWeight: 'bold',
+        lineHeight: '150%'
       },
-      padding: '3%',
-      fontSize: '15px',
-      color: 'darkslategrey',
-      fontWeight: 'bold',
-      lineHeight: '150%'
+
     },
     buttonWrapper: {
-      [theme.breakpoints.down('sm')]: {
-        backgroundColor: 'red',
-      },
-      [theme.breakpoints.between('sm', 'md')]: {
-        backgroundColor: 'blue',
+      [theme.breakpoints.down('md')]: {
+        margin: '0 5% 3% 13%',
       },
       [theme.breakpoints.between('lg', 'xl')]: {
-
+        width: '212px',
+        margin: '45px auto 0'
       },
-      width: '212px',
-      margin: '45px auto 0'
+
+    },
+    packageImg: {
+      width: '96%',
+      padding: '2%'
     }
   }));
 
@@ -113,7 +109,7 @@ const Package = props => {
 
   return (
     <div className={classes.package}>
-      <img src="./img/sourceImages/4CameraPackage.jpg" width="100%" />
+      <img src="./img/sourceImages/4CameraPackage.jpg" className={classes.packageImg} />
 
       <h3 className={classes.packageTitle}>4 Camera 2 MP</h3>
 

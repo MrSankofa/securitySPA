@@ -22,7 +22,7 @@ const Header = () => {
 
   const useStyles = makeStyles(theme => ({
     mainNav: {
-      [theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('md')]: {
         '& ul': {
           width: '100%',
           overflow: 'hidden',
@@ -38,10 +38,7 @@ const Header = () => {
           transition: 'height 1s ease'
         }
       },
-      [theme.breakpoints.between('sm', 'md')]: {
-        backgroundColor: 'blue',
-      },
-      [theme.breakpoints.between('lg', 'xl')]: {
+      [theme.breakpoints.between('md', 'xl')]: {
         zIndex: '3',
         color: 'white',
         textAlign: 'right',
@@ -70,10 +67,7 @@ const Header = () => {
           }
         }
       },
-      [theme.breakpoints.between('sm', 'md')]: {
-        backgroundColor: 'blue',
-      },
-      [theme.breakpoints.between('lg', 'xl')]: {
+      [theme.breakpoints.between('sm', 'xl')]: {
         display: 'inline-block',
         marginLeft: '3%',
         '& a': {
@@ -89,13 +83,10 @@ const Header = () => {
 
     },
     mainNavWrapper: {
-      [theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('md')]: {
         background: 'rgba(0, 0, 0, 1)'
       },
-      [theme.breakpoints.between('sm', 'md')]: {
-        backgroundColor: 'blue',
-      },
-      [theme.breakpoints.between('lg', 'xl')]: {
+      [theme.breakpoints.between('md', 'xl')]: {
         background: 'rgba(0,0,0,1)',
         width: '100%',
         opacity: '1',
@@ -123,16 +114,13 @@ const Header = () => {
       backgroundColor: '#3498db'
     },
     header: {
-      [theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('md')]: {
         backgroundImage: 'url(./img/sourceImages/neighborhood.jpg)',
         backgroundRepeat: 'round',
         width: '100%',
         height: '273px'
       },
-      [theme.breakpoints.between('sm', 'md')]: {
-        backgroundColor: 'blue',
-      },
-      [theme.breakpoints.between('lg', 'xl')]: {
+      [theme.breakpoints.between('md', 'xl')]: {
         height: '670px',
         backgroundImage: 'url(./img/sourceImages/neighborhood.jpg)',
         backgroundRepeat: 'round',
@@ -143,15 +131,12 @@ const Header = () => {
 
     },
     headerContent: {
-      [theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('md')]: {
         paddingLeft: '2%',
         paddingTop: '2%',
         position: 'relative'
       },
-      [theme.breakpoints.between('sm', 'md')]: {
-        backgroundColor: 'blue',
-      },
-      [theme.breakpoints.between('lg', 'xl')]: {
+      [theme.breakpoints.between('md', 'xl')]: {
         paddingLeft: '10%',
         paddingTop: '5%',
         position: 'relative'
@@ -159,14 +144,11 @@ const Header = () => {
 
     },
     mainTitle: {
-      [theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('md')]: {
         color: 'white',
         margin: 0,
       },
-      [theme.breakpoints.between('sm', 'md')]: {
-        backgroundColor: 'blue',
-      },
-      [theme.breakpoints.between('lg', 'xl')]: {
+      [theme.breakpoints.between('md', 'xl')]: {
         color: 'white',
         lineHeight: '160%',
         marginTop: '10%'
@@ -174,13 +156,10 @@ const Header = () => {
 
     },
     mainDescription: {
-      [theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('md')]: {
         color: '#b6bab9',
       },
-      [theme.breakpoints.between('sm', 'md')]: {
-        backgroundColor: 'blue',
-      },
-      [theme.breakpoints.between('lg', 'xl')]: {
+      [theme.breakpoints.between('md', 'xl')]: {
         color: '#b6bab9',
         lineHeight: '180%',
         marginTop: '3%',
@@ -189,26 +168,20 @@ const Header = () => {
 
     },
     buttonWrapper: {
-      [theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('md')]: {
         padding: '4%'
       },
-      [theme.breakpoints.between('sm', 'md')]: {
-        backgroundColor: 'blue',
-      },
-      [theme.breakpoints.between('lg', 'xl')]: {
+      [theme.breakpoints.between('md', 'xl')]: {
         marginTop: '55px'
       },
     },
     contactUs: {
-      [theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('md')]: {
         backgroundColor: '#3498db',
         color: 'white',
         border: 'none',
       },
-      [theme.breakpoints.between('sm', 'md')]: {
-        backgroundColor: 'blue',
-      },
-      [theme.breakpoints.between('lg', 'xl')]: {
+      [theme.breakpoints.between('md', 'xl')]: {
         backgroundColor: '#3498db',
         color: 'white',
         padding: '15px 65px',
@@ -219,15 +192,12 @@ const Header = () => {
 
     },
     learnMore: {
-      [theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('md')]: {
         backgroundColor: 'white',
         color: 'black',
         border: 'none',
       },
-      [theme.breakpoints.between('sm', 'md')]: {
-        backgroundColor: 'blue',
-      },
-      [theme.breakpoints.between('lg', 'xl')]: {
+      [theme.breakpoints.between('md', 'xl')]: {
         backgroundColor: 'white',
         color: 'black',
         padding: '15px 65px',
@@ -240,17 +210,14 @@ const Header = () => {
       backgroundColor: '#fefefe'
     },
     overlay: {
-      [theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('md')]: {
         backgroundColor: 'black',
         position: 'absolute',
         opacity: '0.5',
         width: '100%',
         height: '273px',
       },
-      [theme.breakpoints.between('sm', 'md')]: {
-        backgroundColor: 'blue',
-      },
-      [theme.breakpoints.between('lg', 'xl')]: {
+      [theme.breakpoints.between('md', 'xl')]: {
         backgroundColor: 'black',
         position: 'absolute',
         opacity: '0.5',
@@ -264,10 +231,7 @@ const Header = () => {
       [theme.breakpoints.down('sm')]: {
 
       },
-      [theme.breakpoints.between('sm', 'md')]: {
-        backgroundColor: 'blue',
-      },
-      [theme.breakpoints.between('lg', 'xl')]: {
+      [theme.breakpoints.between('sm', 'xl')]: {
         width: '100%',
         height: '96px',
         background: 'url(./img/sourceImages/gridImg.jpg)',
@@ -284,28 +248,22 @@ const Header = () => {
       backgroundColor: '#fefefe'
     },
     logo: {
-      [theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('md')]: {
         width: '59%',
         marginRight: '24%',
         padding: '2%'
       },
-      [theme.breakpoints.between('sm', 'md')]: {
-        backgroundColor: 'blue',
-      },
-      [theme.breakpoints.between('lg', 'xl')]: {
+      [theme.breakpoints.between('md', 'xl')]: {
         backgroundColor: 'green'
       },
     },
     menu: {
-      [theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('md')]: {
         padding: '1%',
         background: 'black',
         display: 'flex'
       },
-      [theme.breakpoints.between('sm', 'md')]: {
-        backgroundColor: 'blue',
-      },
-      [theme.breakpoints.between('lg', 'xl')]: {
+      [theme.breakpoints.between('md', 'xl')]: {
         display: 'none'
       },
     },
@@ -324,32 +282,32 @@ const Header = () => {
   let stopped = [];
 
   const checkHeader = _.throttle(() => {
-    if (document.querySelector('.makeStyles-mainNavWrapper-68') !== null) {
+    if (document.querySelector('.makeStyles-mainNavWrapper-73') !== null) {
       stopped[0] = false;
       // detect scroll position
       let scrollPosition = [Math.round(window.scrollY)];
 
       // determine if scrolling
       if (stopped[0] === false) {
-        document.querySelector('.makeStyles-mainNavWrapper-68').classList.add('scrolling');
-        document.querySelector('.makeStyles-mainNavWrapper-68').classList.remove('sticky')
+        document.querySelector('.makeStyles-mainNavWrapper-73').classList.add('scrolling');
+        document.querySelector('.makeStyles-mainNavWrapper-73').classList.remove('sticky')
       }
-      console.log('Scrolling has stopped: ', stopped);
-      console.log('scrollPosition: ', scrollPosition);
+      // console.log('Scrolling has stopped: ', stopped);
+      // console.log('scrollPosition: ', scrollPosition);
 
       const runOnce = _.throttle(() => {
         window.clearTimeout(isScrolling);
         stopped[0] = true;
 
         isScrolling = setTimeout(() => {
-          console.log('Scrolling has stopped: ', stopped);
+          // console.log('Scrolling has stopped: ', stopped);
           if (stopped[0] === true && scrollPosition[0] > 670) {
             console.log('triggering if statement');
-            document.querySelector('.makeStyles-mainNavWrapper-68').classList.add('sticky');
-            document.querySelector('.makeStyles-mainNavWrapper-68').classList.remove('scrolling')
+            document.querySelector('.makeStyles-mainNavWrapper-73').classList.add('sticky');
+            document.querySelector('.makeStyles-mainNavWrapper-73').classList.remove('scrolling')
           } else {
-            document.querySelector('.makeStyles-mainNavWrapper-68').classList.remove('scrolling')
-            document.querySelector('.makeStyles-mainNavWrapper-68').classList.remove('sticky')
+            document.querySelector('.makeStyles-mainNavWrapper-73').classList.remove('scrolling')
+            document.querySelector('.makeStyles-mainNavWrapper-73').classList.remove('sticky')
           }
         }, 4000)
 
@@ -364,7 +322,7 @@ const Header = () => {
   let toggle = -1;
   const openMenu = (e) => {
     toggle *= -1;
-    toggle === 1 ? document.querySelector('.makeStyles-mainNav-66 ul').classList.add('open') : document.querySelector('.makeStyles-mainNav-66 ul').classList.remove('open');
+    toggle === 1 ? document.querySelector('.makeStyles-mainNav-71 ul').classList.add('open') : document.querySelector('.makeStyles-mainNav-71 ul').classList.remove('open');
   }
 
   return (

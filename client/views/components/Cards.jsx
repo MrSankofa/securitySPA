@@ -44,11 +44,8 @@ const Cards = () => {
 
   const useStyles = makeStyles(theme => ({
     cardSection: {
-      [theme.breakpoints.down('sm')]: {
-        backgroundColor: 'red',
-      },
-      [theme.breakpoints.between('sm', 'md')]: {
-        backgroundColor: 'blue',
+      [theme.breakpoints.down('md')]: {
+
       },
       [theme.breakpoints.between('lg', 'xl')]: {
         '& h1': {
@@ -63,11 +60,8 @@ const Cards = () => {
 
     },
     packageButtons: {
-      [theme.breakpoints.down('sm')]: {
-        backgroundColor: 'red',
-      },
-      [theme.breakpoints.between('sm', 'md')]: {
-        backgroundColor: 'blue',
+      [theme.breakpoints.down('md')]: {
+        display: 'none'
       },
       [theme.breakpoints.between('lg', 'xl')]: {
         backgroundColor: '#fefefe',
@@ -87,16 +81,19 @@ const Cards = () => {
 
     },
     cardWrapper: {
-      [theme.breakpoints.down('sm')]: {
-        backgroundColor: 'red',
-      },
-      [theme.breakpoints.between('sm', 'md')]: {
-        backgroundColor: 'blue',
+      [theme.breakpoints.down('md')]: {
+
       },
       [theme.breakpoints.between('lg', 'xl')]: {
         margin: '0 auto 6%',
         width: '62%'
       },
+
+    },
+    packageSectionTitle: {
+      [theme.breakpoints.down('md')]: {
+        textAlign: 'center'
+      }
 
     }
 
@@ -106,7 +103,7 @@ const Cards = () => {
 
   return (
     <div className={classes.cardSection}>
-      <h1>Find the right package for <span>your <br></br>home.</span> </h1>
+      <h1 className={classes.packageSectionTitle}>Find the right package for <span>your <br></br>home.</span> </h1>
 
       <div className={classes.packageButtons}>
         <button>4 CAMERA</button>

@@ -55,11 +55,10 @@ import { makeStyles } from '@material-ui/core/styles';
 const GridSPA = (props) => {
   const useStyles = makeStyles(theme => ({
     container: {
-      [theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('md')]: {
         backgroundColor: 'red',
-      },
-      [theme.breakpoints.between('sm', 'md')]: {
-        backgroundColor: 'blue',
+        width: '300px',
+        display: 'none'
       },
       [theme.breakpoints.between('lg', 'xl')]: {
         margin: '0 74px',
@@ -70,11 +69,9 @@ const GridSPA = (props) => {
 
     },
     item: {
-      [theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('md')]: {
         backgroundColor: 'red',
-      },
-      [theme.breakpoints.between('sm', 'md')]: {
-        backgroundColor: 'blue',
+        width: '33.333%'
       },
       [theme.breakpoints.between('lg', 'xl')]: {
         width: '33.3%',
@@ -89,38 +86,41 @@ const GridSPA = (props) => {
     whiteBkg: {
       backgroundColor: '#fefefe'
     },
+    packageImg: {
+
+    }
   }));
   const classes = useStyles();
   return (
     <div className={classes.whiteBkg}>
       <div className={classes.container}>
         <div className={classes.item}>
-          <img src="./img/sourceImages/camera.jpg" height="auto" width="100%" />
+          <img src="./img/sourceImages/camera.jpg" height="auto" className={classes.packageImg} width={"100px"} />
           <h2>Your Next Title</h2>
           <p>Lorem ipsum dolor sit amet,<br></br> consectetur adipiscing elit, sed<br></br>do eiusmod tempor.</p>
         </div>
         <div className={classes.item}>
-          <img src="./img/sourceImages/camera.jpg" height="auto" width="100%" />
+          <img src="./img/sourceImages/camera.jpg" height="auto" className={classes.packageImg} width={"100px"} />
           <h2>Your Next Title</h2>
           <p>Lorem ipsum dolor sit amet,<br></br> consectetur adipiscing elit, sed<br></br>do eiusmod tempor.</p>
         </div>
         <div className={classes.item}>
-          <img src="./img/sourceImages/camera.jpg" height="auto" width="100%" />
+          <img src="./img/sourceImages/camera.jpg" height="auto" className={classes.packageImg} width={"100px"} />
           <h2>Your Next Title</h2>
           <p>Lorem ipsum dolor sit amet,<br></br> consectetur adipiscing elit, sed<br></br>do eiusmod tempor.</p>
         </div>
         <div className={classes.item}>
-          <img src="./img/sourceImages/camera.jpg" height="auto" width="100%" />
+          <img src="./img/sourceImages/camera.jpg" height="auto" className={classes.packageImg} width={"100px"} />
           <h2>Your Next Title</h2>
           <p>Lorem ipsum dolor sit amet,<br></br> consectetur adipiscing elit, sed<br></br>do eiusmod tempor.</p>
         </div>
         <div className={classes.item}>
-          <img src="./img/sourceImages/camera.jpg" height="auto" width="100%" />
+          <img src="./img/sourceImages/camera.jpg" height="auto" className={classes.packageImg} width={"100px"} />
           <h2>Your Next Title</h2>
           <p>Lorem ipsum dolor sit amet,<br></br> consectetur adipiscing elit, sed<br></br>do eiusmod tempor.</p>
         </div>
         <div className={classes.item}>
-          <img src="./img/sourceImages/camera.jpg" height="auto" width="100%" />
+          <img src="./img/sourceImages/camera.jpg" height="auto" className={classes.packageImg} width={"100px"} />
           <h2>Your Next Title</h2>
           <p>Lorem ipsum dolor sit amet,<br></br> consectetur adipiscing elit, sed<br></br>do eiusmod tempor.</p>
         </div>

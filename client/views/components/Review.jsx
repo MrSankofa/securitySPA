@@ -5,11 +5,11 @@ const Review = props => {
 
   const useStyles = makeStyles(theme => ({
     review: {
-      [theme.breakpoints.down('sm')]: {
-        backgroundColor: 'red',
-      },
       [theme.breakpoints.between('sm', 'md')]: {
-        backgroundColor: 'blue',
+        width: '100%',
+        display: 'inline-block',
+        fontSize: '23px',
+        color: '#8e8e8e'
       },
       [theme.breakpoints.between('lg', 'xl')]: {
         width: '686px',
@@ -20,11 +20,8 @@ const Review = props => {
 
     },
     text: {
-      [theme.breakpoints.down('sm')]: {
-        backgroundColor: 'red',
-      },
       [theme.breakpoints.between('sm', 'md')]: {
-        backgroundColor: 'blue',
+        whiteSpace: 'pre-line'
       },
       [theme.breakpoints.between('lg', 'xl')]: {
         whiteSpace: 'pre-line'
