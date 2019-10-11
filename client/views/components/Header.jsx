@@ -282,15 +282,15 @@ const Header = () => {
   let stopped = [];
 
   const checkHeader = _.throttle(() => {
-    if (document.querySelector('.makeStyles-mainNavWrapper-73') !== null) {
+    if (document.querySelector('#navWrapper') !== null) {
       stopped[0] = false;
       // detect scroll position
       let scrollPosition = [Math.round(window.scrollY)];
 
       // determine if scrolling
       if (stopped[0] === false) {
-        document.querySelector('.makeStyles-mainNavWrapper-73').classList.add('scrolling');
-        document.querySelector('.makeStyles-mainNavWrapper-73').classList.remove('sticky')
+        document.querySelector('#navWrapper').classList.add('scrolling');
+        document.querySelector('#navWrapper').classList.remove('sticky')
       }
       // console.log('Scrolling has stopped: ', stopped);
       // console.log('scrollPosition: ', scrollPosition);
@@ -303,11 +303,11 @@ const Header = () => {
           // console.log('Scrolling has stopped: ', stopped);
           if (stopped[0] === true && scrollPosition[0] > 670) {
             console.log('triggering if statement');
-            document.querySelector('.makeStyles-mainNavWrapper-73').classList.add('sticky');
-            document.querySelector('.makeStyles-mainNavWrapper-73').classList.remove('scrolling')
+            document.querySelector('#navWrapper').classList.add('sticky');
+            document.querySelector('#navWrapper').classList.remove('scrolling')
           } else {
-            document.querySelector('.makeStyles-mainNavWrapper-73').classList.remove('scrolling')
-            document.querySelector('.makeStyles-mainNavWrapper-73').classList.remove('sticky')
+            document.querySelector('#navWrapper').classList.remove('scrolling')
+            document.querySelector('#navWrapper').classList.remove('sticky')
           }
         }, 4000)
 
@@ -322,14 +322,14 @@ const Header = () => {
   let toggle = -1;
   const openMenu = (e) => {
     toggle *= -1;
-    toggle === 1 ? document.querySelector('.makeStyles-mainNav-71 ul').classList.add('open') : document.querySelector('.makeStyles-mainNav-71 ul').classList.remove('open');
+    toggle === 1 ? document.querySelector('#nav ul').classList.add('open') : document.querySelector('#nav ul').classList.remove('open');
   }
 
   return (
     <React.Fragment>
-      <div className={classes.mainNavWrapper}>
+      <div className={classes.mainNavWrapper} id={"navWrapper"}>
 
-        <nav className={classes.mainNav}>
+        <nav className={classes.mainNav} id={"nav"}>
           <div className={classes.menu}>
             <div className={classes.logo}>
               <img src="./img/logoDesign/LargeLogo.png" width="100%" height="100%" />

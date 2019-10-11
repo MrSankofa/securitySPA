@@ -2,7 +2,6 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Header from './Header.jsx';
 import Sections from './Sections.jsx';
-import GridSPA from './GridSPA.jsx';
 import Card from './Cards.jsx';
 import ReviewList from './ReviewList.jsx';
 import Contact from './Contact.jsx';
