@@ -55,13 +55,10 @@ import { makeStyles } from '@material-ui/core/styles';
 const GridSPA = (props) => {
   const useStyles = makeStyles(theme => ({
     container: {
-      [theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('md')]: {
         backgroundColor: 'red',
         width: '300px',
         display: 'none'
-      },
-      [theme.breakpoints.between('sm', 'md')]: {
-        backgroundColor: 'blue',
       },
       [theme.breakpoints.between('lg', 'xl')]: {
         margin: '0 74px',
@@ -72,12 +69,9 @@ const GridSPA = (props) => {
 
     },
     item: {
-      [theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('md')]: {
         backgroundColor: 'red',
         width: '33.333%'
-      },
-      [theme.breakpoints.between('sm', 'md')]: {
-        backgroundColor: 'blue',
       },
       [theme.breakpoints.between('lg', 'xl')]: {
         width: '33.3%',

@@ -5,16 +5,13 @@ import { makeStyles } from '@material-ui/core/styles';
 const Package = props => {
   const useStyles = makeStyles(theme => ({
     package: {
-      [theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('md')]: {
         width: '275px',
         backgroundColor: '#fefefe',
         margin: '3% auto',
         height: '600px'
       },
-      [theme.breakpoints.between('sm', 'md')]: {
-        backgroundColor: 'blue',
-      },
-      [theme.breakpoints.between('lg', 'xl')]: {
+      [theme.breakpoints.between('md', 'xl')]: {
         width: '30%',
         backgroundColor: '#fefefe',
         display: 'inline-block',
@@ -26,14 +23,11 @@ const Package = props => {
 
     },
     purchase: {
-      [theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('md')]: {
         width: '100px',
         height: '34px',
         backgroundColor: 'darkslategray',
         color: 'white'
-      },
-      [theme.breakpoints.between('sm', 'md')]: {
-        backgroundColor: 'blue',
       },
       [theme.breakpoints.between('lg', 'xl')]: {
         width: '100px',
@@ -44,14 +38,11 @@ const Package = props => {
 
     },
     learnMore: {
-      [theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('md')]: {
         borderColor: 'darkslategrey',
         width: '100px',
         height: '34px',
         marginLeft: '10px'
-      },
-      [theme.breakpoints.between('sm', 'md')]: {
-        backgroundColor: 'blue',
       },
       [theme.breakpoints.between('lg', 'xl')]: {
         borderColor: 'darkslategrey',
@@ -62,11 +53,8 @@ const Package = props => {
 
     },
     packageTitle: {
-      [theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('md')]: {
         padding: '0 8%'
-      },
-      [theme.breakpoints.between('sm', 'md')]: {
-        backgroundColor: 'blue',
       },
       [theme.breakpoints.between('lg', 'xl')]: {
         textAlign: 'center'
@@ -74,11 +62,8 @@ const Package = props => {
 
     },
     packageText: {
-      [theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('md')]: {
         padding: '0 8%'
-      },
-      [theme.breakpoints.between('sm', 'md')]: {
-        backgroundColor: 'blue',
       },
       [theme.breakpoints.between('lg', 'xl')]: {
         textAlign: 'center',
@@ -88,15 +73,12 @@ const Package = props => {
 
     },
     packageFeaturesLi: {
-      [theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('md')]: {
         padding: '3%',
         fontSize: '15px',
         color: 'darkslategrey',
         fontWeight: 'bold',
         lineHeight: '150%'
-      },
-      [theme.breakpoints.between('sm', 'md')]: {
-        backgroundColor: 'blue',
       },
       [theme.breakpoints.between('lg', 'xl')]: {
         padding: '3%',
@@ -108,11 +90,8 @@ const Package = props => {
 
     },
     buttonWrapper: {
-      [theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('md')]: {
         margin: '0 5% 3% 13%',
-      },
-      [theme.breakpoints.between('sm', 'md')]: {
-        backgroundColor: 'blue',
       },
       [theme.breakpoints.between('lg', 'xl')]: {
         width: '212px',

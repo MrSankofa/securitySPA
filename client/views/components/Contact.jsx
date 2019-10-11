@@ -10,16 +10,13 @@ import qs from 'qs';
 const Contact = (props) => {
   const useStyles = makeStyles(theme => ({
     contactWrapper: {
-      [theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('md')]: {
         width: '100%',
         height: '500px',
         backgroundImage: 'url(\'./img/sourceImages/contactUs.jpg\')',
         backgroundRepeat: 'round',
         position: 'relative',
         borderRadius: '0 10% 0 0'
-      },
-      [theme.breakpoints.between('sm', 'md')]: {
-        backgroundColor: 'blue',
       },
       [theme.breakpoints.between('lg', 'xl')]: {
         width: '100%',
@@ -32,16 +29,13 @@ const Contact = (props) => {
 
     },
     overlay: {
-      [theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('md')]: {
         width: '100%',
         height: '500px',
         position: 'absolute',
         backgroundColor: 'black',
         opacity: '0.5',
         borderRadius: '0 10% 0 0'
-      },
-      [theme.breakpoints.between('sm', 'md')]: {
-        backgroundColor: 'blue',
       },
       [theme.breakpoints.between('lg', 'xl')]: {
         width: '100%',
@@ -54,15 +48,12 @@ const Contact = (props) => {
 
     },
     form: {
-      [theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('md')]: {
         width: '100%',
         height: '500px',
         margin: '0 auto',
         textAlign: 'center',
         position: 'relative'
-      },
-      [theme.breakpoints.between('sm', 'md')]: {
-        backgroundColor: 'blue',
       },
       [theme.breakpoints.between('lg', 'xl')]: {
         width: '620px',
@@ -74,14 +65,11 @@ const Contact = (props) => {
 
     },
     field: {
-      [theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('md')]: {
         border: 'none',
         height: '32px',
         width: '200px',
         margin: '13px'
-      },
-      [theme.breakpoints.between('sm', 'md')]: {
-        backgroundColor: 'blue',
       },
       [theme.breakpoints.between('lg', 'xl')]: {
         border: 'none',
@@ -92,13 +80,10 @@ const Contact = (props) => {
 
     },
     textArea: {
-      [theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('md')]: {
         width: '75%',
-        height: '150px',
+        height: '100px',
         marginTop: '10px'
-      },
-      [theme.breakpoints.between('sm', 'md')]: {
-        backgroundColor: 'blue',
       },
       [theme.breakpoints.between('lg', 'xl')]: {
         width: '462px',

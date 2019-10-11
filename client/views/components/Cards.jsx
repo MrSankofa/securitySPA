@@ -44,11 +44,8 @@ const Cards = () => {
 
   const useStyles = makeStyles(theme => ({
     cardSection: {
-      [theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('md')]: {
 
-      },
-      [theme.breakpoints.between('sm', 'md')]: {
-        backgroundColor: 'blue',
       },
       [theme.breakpoints.between('lg', 'xl')]: {
         '& h1': {
@@ -63,11 +60,8 @@ const Cards = () => {
 
     },
     packageButtons: {
-      [theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('md')]: {
         display: 'none'
-      },
-      [theme.breakpoints.between('sm', 'md')]: {
-        backgroundColor: 'blue',
       },
       [theme.breakpoints.between('lg', 'xl')]: {
         backgroundColor: '#fefefe',
@@ -87,11 +81,8 @@ const Cards = () => {
 
     },
     cardWrapper: {
-      [theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('md')]: {
 
-      },
-      [theme.breakpoints.between('sm', 'md')]: {
-        backgroundColor: 'blue',
       },
       [theme.breakpoints.between('lg', 'xl')]: {
         margin: '0 auto 6%',
@@ -100,7 +91,7 @@ const Cards = () => {
 
     },
     packageSectionTitle: {
-      [theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('md')]: {
         textAlign: 'center'
       }
 
