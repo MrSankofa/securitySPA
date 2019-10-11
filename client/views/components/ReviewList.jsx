@@ -8,7 +8,16 @@ const ReviewList = (props) => {
   const useStyles = makeStyles(theme => ({
     reviewCarousel: {
       [theme.breakpoints.down('sm')]: {
-        backgroundColor: 'red',
+        position: 'relative',
+        margin: '8% auto',
+        height: 'auto',
+        overflow: 'hidden',
+        whiteSpace: 'nowrap',
+        textAlign: 'center',
+        width: '100%',
+        '& h1': {
+          fontSize: '18px'
+        }
       },
       [theme.breakpoints.between('sm', 'md')]: {
         backgroundColor: 'blue',
@@ -26,7 +35,12 @@ const ReviewList = (props) => {
     },
     reviewWrapper: {
       [theme.breakpoints.down('sm')]: {
-        backgroundColor: 'red',
+        textAlign: 'center',
+        position: 'relative',
+        width: '100%',
+        height: '100%',
+        textAlign: 'center',
+        margin: '0 auto'
       },
       [theme.breakpoints.between('sm', 'md')]: {
         backgroundColor: 'blue',
@@ -43,7 +57,9 @@ const ReviewList = (props) => {
     },
     avatarSlider: {
       [theme.breakpoints.down('sm')]: {
-        backgroundColor: 'red',
+        width: '31%',
+        margin: '0 auto',
+        overflow: 'hidden',
       },
       [theme.breakpoints.between('sm', 'md')]: {
         backgroundColor: 'blue',
@@ -57,7 +73,9 @@ const ReviewList = (props) => {
     },
     avatarWrapper: {
       [theme.breakpoints.down('sm')]: {
-        backgroundColor: 'red',
+        width: '100%',
+        height: '100 %',
+        display: 'inline-block'
       },
       [theme.breakpoints.between('sm', 'md')]: {
         backgroundColor: 'blue',
@@ -71,7 +89,7 @@ const ReviewList = (props) => {
     },
     avatar: {
       [theme.breakpoints.down('sm')]: {
-        backgroundColor: 'red',
+        borderRadius: '50%'
       },
       [theme.breakpoints.between('sm', 'md')]: {
         backgroundColor: 'blue',

@@ -57,6 +57,8 @@ const GridSPA = (props) => {
     container: {
       [theme.breakpoints.down('sm')]: {
         backgroundColor: 'red',
+        width: '300px',
+        display: 'none'
       },
       [theme.breakpoints.between('sm', 'md')]: {
         backgroundColor: 'blue',
@@ -72,6 +74,7 @@ const GridSPA = (props) => {
     item: {
       [theme.breakpoints.down('sm')]: {
         backgroundColor: 'red',
+        width: '33.333%'
       },
       [theme.breakpoints.between('sm', 'md')]: {
         backgroundColor: 'blue',
@@ -98,32 +101,32 @@ const GridSPA = (props) => {
     <div className={classes.whiteBkg}>
       <div className={classes.container}>
         <div className={classes.item}>
-          <img src="./img/sourceImages/camera.jpg" height="auto" className={classes.packageImg} />
+          <img src="./img/sourceImages/camera.jpg" height="auto" className={classes.packageImg} width={"100px"} />
           <h2>Your Next Title</h2>
           <p>Lorem ipsum dolor sit amet,<br></br> consectetur adipiscing elit, sed<br></br>do eiusmod tempor.</p>
         </div>
         <div className={classes.item}>
-          <img src="./img/sourceImages/camera.jpg" height="auto" className={classes.packageImg} />
+          <img src="./img/sourceImages/camera.jpg" height="auto" className={classes.packageImg} width={"100px"} />
           <h2>Your Next Title</h2>
           <p>Lorem ipsum dolor sit amet,<br></br> consectetur adipiscing elit, sed<br></br>do eiusmod tempor.</p>
         </div>
         <div className={classes.item}>
-          <img src="./img/sourceImages/camera.jpg" height="auto" className={classes.packageImg} />
+          <img src="./img/sourceImages/camera.jpg" height="auto" className={classes.packageImg} width={"100px"} />
           <h2>Your Next Title</h2>
           <p>Lorem ipsum dolor sit amet,<br></br> consectetur adipiscing elit, sed<br></br>do eiusmod tempor.</p>
         </div>
         <div className={classes.item}>
-          <img src="./img/sourceImages/camera.jpg" height="auto" className={classes.packageImg} />
+          <img src="./img/sourceImages/camera.jpg" height="auto" className={classes.packageImg} width={"100px"} />
           <h2>Your Next Title</h2>
           <p>Lorem ipsum dolor sit amet,<br></br> consectetur adipiscing elit, sed<br></br>do eiusmod tempor.</p>
         </div>
         <div className={classes.item}>
-          <img src="./img/sourceImages/camera.jpg" height="auto" className={classes.packageImg} />
+          <img src="./img/sourceImages/camera.jpg" height="auto" className={classes.packageImg} width={"100px"} />
           <h2>Your Next Title</h2>
           <p>Lorem ipsum dolor sit amet,<br></br> consectetur adipiscing elit, sed<br></br>do eiusmod tempor.</p>
         </div>
         <div className={classes.item}>
-          <img src="./img/sourceImages/camera.jpg" height="auto" className={classes.packageImg} />
+          <img src="./img/sourceImages/camera.jpg" height="auto" className={classes.packageImg} width={"100px"} />
           <h2>Your Next Title</h2>
           <p>Lorem ipsum dolor sit amet,<br></br> consectetur adipiscing elit, sed<br></br>do eiusmod tempor.</p>
         </div>

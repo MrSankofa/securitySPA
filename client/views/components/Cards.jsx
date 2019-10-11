@@ -45,7 +45,7 @@ const Cards = () => {
   const useStyles = makeStyles(theme => ({
     cardSection: {
       [theme.breakpoints.down('sm')]: {
-        backgroundColor: 'red',
+
       },
       [theme.breakpoints.between('sm', 'md')]: {
         backgroundColor: 'blue',
@@ -64,7 +64,7 @@ const Cards = () => {
     },
     packageButtons: {
       [theme.breakpoints.down('sm')]: {
-        backgroundColor: 'red',
+        display: 'none'
       },
       [theme.breakpoints.between('sm', 'md')]: {
         backgroundColor: 'blue',
@@ -88,7 +88,7 @@ const Cards = () => {
     },
     cardWrapper: {
       [theme.breakpoints.down('sm')]: {
-        backgroundColor: 'red',
+
       },
       [theme.breakpoints.between('sm', 'md')]: {
         backgroundColor: 'blue',
@@ -98,6 +98,12 @@ const Cards = () => {
         width: '62%'
       },
 
+    },
+    packageSectionTitle: {
+      [theme.breakpoints.down('sm')]: {
+        textAlign: 'center'
+      }
+
     }
 
   }));
@@ -106,7 +112,7 @@ const Cards = () => {
 
   return (
     <div className={classes.cardSection}>
-      <h1>Find the right package for <span>your <br></br>home.</span> </h1>
+      <h1 className={classes.packageSectionTitle}>Find the right package for <span>your <br></br>home.</span> </h1>
 
       <div className={classes.packageButtons}>
         <button>4 CAMERA</button>
