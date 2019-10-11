@@ -1,8 +1,14 @@
 
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import FeatureItem from './FeatureItem.jsx';
 
-const Package = props => {
+const Package = ({ packageType }) => {
+  console.log('packageType: ', packageType);
+
+  const { name, description, imageUrl, features, packageCategory } = packageType;
+
+
   const useStyles = makeStyles(theme => ({
     package: {
       [theme.breakpoints.down('md')]: {
@@ -15,7 +21,7 @@ const Package = props => {
         width: '30%',
         backgroundColor: '#fefefe',
         display: 'inline-block',
-        margin: '0 10px',
+        margin: '0px 10px 22px',
         paddingBottom: '4%',
         height: '600px'
       },
@@ -109,16 +115,21 @@ const Package = props => {
 
   return (
     <div className={classes.package}>
-      <img src="./img/sourceImages/4CameraPackage.jpg" className={classes.packageImg} />
+      <img src={`${imageUrl}`} className={classes.packageImg} />
 
-      <h3 className={classes.packageTitle}>4 Camera 2 MP</h3>
+      <h3 className={classes.packageTitle}>{name}</h3>
 
-      <p className={classes.packageText}>Lorem ipsum dolor sit amet,<br></br> consectetur adipiscing elit, sed<br></br>do eiusmod tempor.</p>
+      <p className={classes.packageText}>{description}</p>
 
       <ul className={classes.packageFeaturesUL}>
-        <li className={classes.packageFeaturesLi}>2.0 MP IP turret security cameras, white</li>
-        <li className={classes.packageFeaturesLi}>2.m mm lens; 108 FOV</li>
-        <li className={classes.packageFeaturesLi}>Records up to 1080p HD video @30fps</li>
+        {
+          features.length > 0 ?
+            features.map((item, i) => {
+              return <FeatureItem feature={item} key={i} />
+            })
+            :
+            <div>awesome product</div>
+        }
       </ul>
       <div className={classes.buttonWrapper}>
         <button className={classes.purchase}>purchase</button>

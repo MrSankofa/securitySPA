@@ -58,8 +58,17 @@ const Cards = ({ packages, getPackage, defaultPackage }) => {
 
     },
     packageButtons: {
-      [theme.breakpoints.down('md')]: {
-        display: 'none'
+      [theme.breakpoints.down('lg')]: {
+        backgroundColor: '#fefefe',
+        width: '28%',
+        margin: '3% auto',
+        '& button': {
+          margin: '1%',
+          width: '30%',
+          padding: '2%',
+          backgroundColor: '#fefefe',
+          border: 'none'
+        }
       },
       [theme.breakpoints.between('lg', 'xl')]: {
         backgroundColor: '#fefefe',
@@ -113,7 +122,7 @@ const Cards = ({ packages, getPackage, defaultPackage }) => {
       <div className={classes.cardWrapper}>
         {
           packages[defaultPackage] !== undefined ? packages[defaultPackage].map((item, i) => {
-            return <Package key={i} />
+            return <Package key={i} packageType={item} />
           })
             :
             <div>nothing here</div>
