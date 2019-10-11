@@ -15,7 +15,7 @@ const Package = props => {
         backgroundColor: 'blue',
       },
       [theme.breakpoints.between('lg', 'xl')]: {
-        width: '275px',
+        width: '30%',
         backgroundColor: '#fefefe',
         display: 'inline-block',
         margin: '0 10px',
