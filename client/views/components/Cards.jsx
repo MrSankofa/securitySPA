@@ -89,7 +89,8 @@ const Cards = ({ packages, getPackage, defaultPackage, getDataRows }) => {
     },
     cardWrapper: {
       [theme.breakpoints.down('md')]: {
-
+        margin: '0 auto 6%',
+        width: '60%'
       },
       [theme.breakpoints.between('lg', 'xl')]: {
         margin: '0 auto 6%',

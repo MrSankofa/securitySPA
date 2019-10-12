@@ -3,6 +3,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import FeatureItem from './FeatureItem.jsx';
 import Grid from '@material-ui/core/Grid';
+import { minHeight } from '@material-ui/system';
 
 
 const Package = ({ packageType }) => {
@@ -92,7 +93,7 @@ const Package = ({ packageType }) => {
         fontSize: '15px',
         color: 'darkslategrey',
         fontWeight: 'bold',
-        lineHeight: '150%'
+        lineHeight: '150%',
       },
 
     },
@@ -114,7 +115,7 @@ const Package = ({ packageType }) => {
   const classes = useStyles();
 
   return (
-    <Grid item xs={4}>
+    <Grid item md={4} >
       <div className={classes.package}>
         <img src={`${imageUrl}`} className={classes.packageImg} />
 
@@ -139,7 +140,7 @@ const Package = ({ packageType }) => {
           <button className={classes.learnMore}>learn more</button>
         </div>
       </div>
-    </Grid>
+    </Grid >
   )
 }
 
