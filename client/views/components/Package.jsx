@@ -2,9 +2,10 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import FeatureItem from './FeatureItem.jsx';
+import Grid from '@material-ui/core/Grid';
+
 
 const Package = ({ packageType }) => {
-  console.log('packageType: ', packageType);
 
   const { name, description, imageUrl, features, packageCategory } = packageType;
 
@@ -12,18 +13,18 @@ const Package = ({ packageType }) => {
   const useStyles = makeStyles(theme => ({
     package: {
       [theme.breakpoints.down('md')]: {
-        width: '275px',
+
         backgroundColor: '#fefefe',
         margin: '3% auto',
         height: '600px'
       },
       [theme.breakpoints.between('md', 'xl')]: {
-        width: '30%',
+
         backgroundColor: '#fefefe',
         display: 'inline-block',
-        margin: '0px 10px 22px',
+
         paddingBottom: '4%',
-        height: '600px'
+
       },
 
 
@@ -101,42 +102,46 @@ const Package = ({ packageType }) => {
       },
       [theme.breakpoints.between('lg', 'xl')]: {
         width: '212px',
-        margin: '45px auto 0'
+        marginLeft: '6%'
       },
 
     },
     packageImg: {
-      width: '96%',
-      padding: '2%'
+      width: '89%'
     }
   }));
 
   const classes = useStyles();
 
   return (
-    <div className={classes.package}>
-      <img src={`${imageUrl}`} className={classes.packageImg} />
+    <Grid item xs={4}>
+      <div className={classes.package}>
+        <img src={`${imageUrl}`} className={classes.packageImg} />
 
-      <h3 className={classes.packageTitle}>{name}</h3>
+        <h3 className={classes.packageTitle}>{name}</h3>
 
-      <p className={classes.packageText}>{description}</p>
+        <p className={classes.packageText}>{description}</p>
 
-      <ul className={classes.packageFeaturesUL}>
-        {
-          features.length > 0 ?
-            features.map((item, i) => {
-              return <FeatureItem feature={item} key={i} />
-            })
-            :
-            <div>awesome product</div>
-        }
-      </ul>
-      <div className={classes.buttonWrapper}>
-        <button className={classes.purchase}>purchase</button>
-        <button className={classes.learnMore}>learn more</button>
+        <ul className={classes.packageFeaturesUL}>
+          {
+            features.length > 0 ?
+              features.map((item, i) => {
+                return (
+                  <FeatureItem feature={item} key={i} />
+                )
+              })
+              :
+              <div>awesome product</div>
+          }
+        </ul>
+        <div className={classes.buttonWrapper}>
+          <button className={classes.purchase}>purchase</button>
+          <button className={classes.learnMore}>learn more</button>
+        </div>
       </div>
-    </div>
+    </Grid>
   )
 }
 
 export default Package;
+

@@ -2,7 +2,7 @@ import React from 'react';
 import { Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Package from './Package.jsx'
-
+import NestedGrid from './NestedGrid.jsx'
 // const styles = {
 //   cardSection: {
 //     '& h1': {
@@ -38,7 +38,7 @@ import Package from './Package.jsx'
 
 
 
-const Cards = ({ packages, getPackage, defaultPackage }) => {
+const Cards = ({ packages, getPackage, defaultPackage, getDataRows }) => {
 
   const useStyles = makeStyles(theme => ({
     cardSection: {
@@ -93,7 +93,7 @@ const Cards = ({ packages, getPackage, defaultPackage }) => {
       },
       [theme.breakpoints.between('lg', 'xl')]: {
         margin: '0 auto 6%',
-        width: '62%'
+        width: '60%'
       },
 
     },
@@ -119,15 +119,23 @@ const Cards = ({ packages, getPackage, defaultPackage }) => {
         <button onClick={() => { getPackage('6') }}>6 CAMERA</button>
         <button onClick={() => { getPackage('8') }}>8 CAMERA</button>
       </div>
-      <div className={classes.cardWrapper}>
+      {/* <div className={classes.cardWrapper}>
         {
           packages[defaultPackage] !== undefined ? packages[defaultPackage].map((item, i) => {
             return <Package key={i} packageType={item} />
           })
             :
-            <div>nothing here</div>
+            <div>features</div>
         }
+      </div> */}
+
+      <div className={classes.cardWrapper}>
+
+        <Grid container spacing={2}>
+          <NestedGrid dataRows={getDataRows(packages[defaultPackage])} />
+        </Grid>
       </div>
+
 
 
     </div>

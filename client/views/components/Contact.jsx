@@ -124,7 +124,7 @@ const Contact = (props) => {
     //   })
     axios({
       method: 'post',
-      url: '/contact',
+      url: 'https://webhook.site/121d06e3-90f0-4d87-9440-0850da8fe8c6/post',
       data: qs.stringify(postReqData)
     })
       .then(results => {

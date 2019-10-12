@@ -163,7 +163,8 @@ const Header = () => {
         color: '#b6bab9',
         lineHeight: '180%',
         marginTop: '3%',
-        fontSize: '17px'
+        fontSize: '17px',
+        padding: '0 2% 0 0'
       },
 
     },
@@ -302,7 +303,6 @@ const Header = () => {
         isScrolling = setTimeout(() => {
           // console.log('Scrolling has stopped: ', stopped);
           if (stopped[0] === true && scrollPosition[0] > 670) {
-            console.log('triggering if statement');
             document.querySelector('#navWrapper').classList.add('sticky');
             document.querySelector('#navWrapper').classList.remove('scrolling')
           } else {
@@ -353,7 +353,7 @@ const Header = () => {
           <div className={classes.overlay}></div>
           <div className={classes.headerContent}>
             <h1 className={classes.mainTitle}>Home Security you can <br></br> fully trust.</h1>
-            <p className={classes.mainDescription}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br></br> sed do eiusmod tempor Lorem ipsum dolor.</p>
+            <p className={classes.mainDescription}>It is our goal to deliver an efficient, effective, and high-quality security solutions while providing the best level of customer service for our clients. We strive to deliver peace of mind to each and every customer using the highest quality equipment and professionalism. We will work hard to provide what is the best option for each customer. From security systems to video surveillance, we have you covered by educating ourselves and using the latest technology and products to protect not only your home but what's most important, you and your loved ones.</p>
             <div className={classes.buttonWrapper}>
               <button className={classes.contactUs}> Contact Us</button>
               <button className={classes.learnMore}> Learn More</button>
