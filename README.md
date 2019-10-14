@@ -25,7 +25,7 @@ Go to **localhost:3008**, Or you can open the HTML file if the bundle file has a
 
 <br/>
 
-![](http://g.recordit.co/HpWS6rx81f.gif)
+![](documentation/header.gif)
 
 
 
@@ -35,9 +35,6 @@ Go to **localhost:3008**, Or you can open the HTML file if the bundle file has a
 
 <br/>
 
-![](http://g.recordit.co/joRoCWNlF3.gif)
-![](http://g.recordit.co/joRoCWNlF3.gif)
-
 ## Packages
 
 * Users can click on the different package types (4,6,8 cameras). Material-UI handles the grid. In App.jsx getDataRows will parse the number of packages into array rows of three. 
@@ -46,8 +43,7 @@ Go to **localhost:3008**, Or you can open the HTML file if the bundle file has a
 
 <br/>
 
-![](http://g.recordit.co/zu1ZgntPj8.gif)
-![](http://g.recordit.co/zu1ZgntPj8.gif)
+![](documentation/packages.gif)
 
 ## Reviews
 * Reviews will only display on screens with resolution 1280px and above. At the time of creation, this company had no reviews so developers will need to update the get requests from the App.jsx componentDidMount function. 
@@ -60,4 +56,3 @@ Go to **localhost:3008**, Or you can open the HTML file if the bundle file has a
 
 * Basic form that sends a post request to this url: 'https://webhook.site/121d06e3-90f0-4d87-9440-0850da8fe8c6/contact'
 
-![](http://g.recordit.co/oEcLdSYWdi.gif)
