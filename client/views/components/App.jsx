@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import SecuritySPA from './SecuritySPA.jsx';
 import axios from 'axios';
 import packageData from '../../../data/packageData.js';
-console.log('packageData: ', packageData);
+
 export default class App extends Component {
   constructor(props) {
     super(props)
@@ -18,7 +18,6 @@ export default class App extends Component {
   }
 
   getPackage(typeOfPackage) {
-    console.log('typeOfPackage: ', typeOfPackage);
     this.setState({
       defaultPackage: typeOfPackage
     })
@@ -28,26 +27,27 @@ export default class App extends Component {
     return Math.ceil(array.length / 3);
   }
 
+  // used for the NestedGrid to display rows of data of three columns
   getDataRows(array) {
     let copy = array.slice();
 
     const result = [];
 
     let numberOfRows = this.getNumberRowsNeeded(array);
-    console.log('numberOfRows: ', numberOfRows);
 
     while (numberOfRows > 0) {
       result.push(copy.slice(0, 3));
       copy = copy.slice(3);
       numberOfRows--;
     }
-    console.log('result: ', result);
     return result;
 
   }
 
 
   componentDidMount() {
+    // once business has Yelp reviews change get request to: https://api.yelp.com/v3/businesses/xAG4O7l-t1ubbwVAlPnDKg/reviews
+    // you willneed to send this GET request with a Bearer Token that you can generate from the yelp website
     axios.get('/DummyYelpServer')
       .then(({ data }) => {
         this.setState({

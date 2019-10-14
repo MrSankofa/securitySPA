@@ -19,9 +19,9 @@ const SecuritySPA = ({ reviews, slides, packages, getPackage, defaultPackage, ge
         <div className={classes.root}>
             <Header />
             <Sections />
-            <Card packages={packages} getPackage={getPackage} defaultPackage={defaultPackage} getDataRows={getDataRows}/>
+            <Card packages={packages} getPackage={getPackage} defaultPackage={defaultPackage} getDataRows={getDataRows} />
             {
-                slides !== 0 ? (<ReviewList reviews={reviews} slides={slides} />) : <div></div>
+                slides !== 0 ? (<ReviewList reviews={reviews} slides={slides} />) : <div>No Reviews</div>
             }
             <Contact />
         </div>
