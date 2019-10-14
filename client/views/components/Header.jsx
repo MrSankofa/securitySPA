@@ -3,21 +3,6 @@ import _ from 'lodash';
 import injectSheet from 'react-jss'
 import { makeStyles } from '@material-ui/core/styles';
 
-/**
- * root: {
-      padding: theme.spacing(1),
-      [theme.breakpoints.down('sm')]: {
-        backgroundColor: 'red',
-      },
-      [theme.breakpoints.up('md')]: {
-        backgroundColor: 'blue',
-      },
-      [theme.breakpoints.up('lg')]: {
-        backgroundColor: 'green',
-      },
-    }
- */
-
 const Header = () => {
 
   const useStyles = makeStyles(theme => ({
@@ -118,7 +103,7 @@ const Header = () => {
         backgroundImage: 'url(./img/sourceImages/neighborhood.jpg)',
         backgroundRepeat: 'round',
         width: '100%',
-        height: '273px'
+        height: '355px'
       },
       [theme.breakpoints.between('md', 'xl')]: {
         height: '670px',
@@ -156,27 +141,41 @@ const Header = () => {
 
     },
     mainDescription: {
-      [theme.breakpoints.down('md')]: {
+      [theme.breakpoints.down('sm')]: {
+        display: 'none'
+      },
+      [theme.breakpoints.only('md')]: {
         color: '#b6bab9',
       },
       [theme.breakpoints.between('md', 'xl')]: {
         color: '#b6bab9',
         lineHeight: '180%',
         marginTop: '3%',
-        fontSize: '17px'
+        fontSize: '17px',
+        padding: '0 2% 0 0'
       },
 
     },
     buttonWrapper: {
       [theme.breakpoints.down('md')]: {
-        padding: '4%'
+        padding: '4%',
+        margin: '6%'
       },
       [theme.breakpoints.between('md', 'xl')]: {
         marginTop: '55px'
       },
     },
     contactUs: {
-      [theme.breakpoints.down('md')]: {
+      [theme.breakpoints.down('sm')]: {
+        backgroundColor: '#3498db',
+        color: 'white',
+        border: 'none',
+        borderStyle: 'groove',
+        width: '100px',
+        height: '31px',
+        margin: '3%'
+      },
+      [theme.breakpoints.only('md')]: {
         backgroundColor: '#3498db',
         color: 'white',
         border: 'none',
@@ -192,7 +191,15 @@ const Header = () => {
 
     },
     learnMore: {
-      [theme.breakpoints.down('md')]: {
+      [theme.breakpoints.down('sm')]: {
+        backgroundColor: 'white',
+        color: 'black',
+        border: 'none',
+        borderStyle: 'groove',
+        width: '100px',
+        height: '31px',
+      },
+      [theme.breakpoints.only('md')]: {
         backgroundColor: 'white',
         color: 'black',
         border: 'none',
@@ -215,7 +222,7 @@ const Header = () => {
         position: 'absolute',
         opacity: '0.5',
         width: '100%',
-        height: '273px',
+        height: '355px',
       },
       [theme.breakpoints.between('md', 'xl')]: {
         backgroundColor: 'black',
@@ -282,15 +289,15 @@ const Header = () => {
   let stopped = [];
 
   const checkHeader = _.throttle(() => {
-    if (document.querySelector('.makeStyles-mainNavWrapper-73') !== null) {
+    if (document.querySelector('#navWrapper') !== null) {
       stopped[0] = false;
       // detect scroll position
       let scrollPosition = [Math.round(window.scrollY)];
 
       // determine if scrolling
       if (stopped[0] === false) {
-        document.querySelector('.makeStyles-mainNavWrapper-73').classList.add('scrolling');
-        document.querySelector('.makeStyles-mainNavWrapper-73').classList.remove('sticky')
+        document.querySelector('#navWrapper').classList.add('scrolling');
+        document.querySelector('#navWrapper').classList.remove('sticky')
       }
       // console.log('Scrolling has stopped: ', stopped);
       // console.log('scrollPosition: ', scrollPosition);
@@ -302,12 +309,11 @@ const Header = () => {
         isScrolling = setTimeout(() => {
           // console.log('Scrolling has stopped: ', stopped);
           if (stopped[0] === true && scrollPosition[0] > 670) {
-            console.log('triggering if statement');
-            document.querySelector('.makeStyles-mainNavWrapper-73').classList.add('sticky');
-            document.querySelector('.makeStyles-mainNavWrapper-73').classList.remove('scrolling')
+            document.querySelector('#navWrapper').classList.add('sticky');
+            document.querySelector('#navWrapper').classList.remove('scrolling')
           } else {
-            document.querySelector('.makeStyles-mainNavWrapper-73').classList.remove('scrolling')
-            document.querySelector('.makeStyles-mainNavWrapper-73').classList.remove('sticky')
+            document.querySelector('#navWrapper').classList.remove('scrolling')
+            document.querySelector('#navWrapper').classList.remove('sticky')
           }
         }, 4000)
 
@@ -322,14 +328,14 @@ const Header = () => {
   let toggle = -1;
   const openMenu = (e) => {
     toggle *= -1;
-    toggle === 1 ? document.querySelector('.makeStyles-mainNav-71 ul').classList.add('open') : document.querySelector('.makeStyles-mainNav-71 ul').classList.remove('open');
+    toggle === 1 ? document.querySelector('#nav ul').classList.add('open') : document.querySelector('#nav ul').classList.remove('open');
   }
 
   return (
     <React.Fragment>
-      <div className={classes.mainNavWrapper}>
+      <div className={classes.mainNavWrapper} id={"navWrapper"}>
 
-        <nav className={classes.mainNav}>
+        <nav className={classes.mainNav} id={"nav"}>
           <div className={classes.menu}>
             <div className={classes.logo}>
               <img src="./img/logoDesign/LargeLogo.png" width="100%" height="100%" />
@@ -353,7 +359,7 @@ const Header = () => {
           <div className={classes.overlay}></div>
           <div className={classes.headerContent}>
             <h1 className={classes.mainTitle}>Home Security you can <br></br> fully trust.</h1>
-            <p className={classes.mainDescription}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br></br> sed do eiusmod tempor Lorem ipsum dolor.</p>
+            <p className={classes.mainDescription}>It is our goal to deliver an efficient, effective, and high-quality security solutions while providing the best level of customer service for our clients. We strive to deliver peace of mind to each and every customer using the highest quality equipment and professionalism. We will work hard to provide what is the best option for each customer. From security systems to video surveillance, we have you covered by educating ourselves and using the latest technology and products to protect not only your home but what's most important, you and your loved ones.</p>
             <div className={classes.buttonWrapper}>
               <button className={classes.contactUs}> Contact Us</button>
               <button className={classes.learnMore}> Learn More</button>

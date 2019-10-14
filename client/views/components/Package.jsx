@@ -1,23 +1,31 @@
 
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import FeatureItem from './FeatureItem.jsx';
+import Grid from '@material-ui/core/Grid';
+import { minHeight } from '@material-ui/system';
 
-const Package = props => {
+
+const Package = ({ packageType }) => {
+
+  const { name, description, imageUrl, features, packageCategory } = packageType;
+
+
   const useStyles = makeStyles(theme => ({
     package: {
       [theme.breakpoints.down('md')]: {
-        width: '275px',
+
         backgroundColor: '#fefefe',
         margin: '3% auto',
         height: '600px'
       },
       [theme.breakpoints.between('md', 'xl')]: {
-        width: '30%',
+
         backgroundColor: '#fefefe',
         display: 'inline-block',
-        margin: '0 10px',
+
         paddingBottom: '4%',
-        height: '600px'
+
       },
 
 
@@ -85,47 +93,56 @@ const Package = props => {
         fontSize: '15px',
         color: 'darkslategrey',
         fontWeight: 'bold',
-        lineHeight: '150%'
+        lineHeight: '150%',
       },
 
     },
     buttonWrapper: {
       [theme.breakpoints.down('md')]: {
-        margin: '0 5% 3% 13%',
+        margin: '0 auto',
       },
       [theme.breakpoints.between('lg', 'xl')]: {
         width: '212px',
-        margin: '45px auto 0'
+        marginLeft: '6%'
       },
 
     },
     packageImg: {
-      width: '96%',
-      padding: '2%'
+      width: '89%'
     }
   }));
 
   const classes = useStyles();
 
   return (
-    <div className={classes.package}>
-      <img src="./img/sourceImages/4CameraPackage.jpg" className={classes.packageImg} />
+    <Grid item sm={6} md={4} >
+      <div className={classes.package}>
+        <img src={`${imageUrl}`} className={classes.packageImg} />
 
-      <h3 className={classes.packageTitle}>4 Camera 2 MP</h3>
+        <h3 className={classes.packageTitle}>{name}</h3>
 
-      <p className={classes.packageText}>Lorem ipsum dolor sit amet,<br></br> consectetur adipiscing elit, sed<br></br>do eiusmod tempor.</p>
+        <p className={classes.packageText}>{description}</p>
 
-      <ul className={classes.packageFeaturesUL}>
-        <li className={classes.packageFeaturesLi}>2.0 MP IP turret security cameras, white</li>
-        <li className={classes.packageFeaturesLi}>2.m mm lens; 108 FOV</li>
-        <li className={classes.packageFeaturesLi}>Records up to 1080p HD video @30fps</li>
-      </ul>
-      <div className={classes.buttonWrapper}>
-        <button className={classes.purchase}>purchase</button>
-        <button className={classes.learnMore}>learn more</button>
+        <ul className={classes.packageFeaturesUL}>
+          {
+            features.length > 0 ?
+              features.map((item, i) => {
+                return (
+                  <FeatureItem feature={item} key={i} />
+                )
+              })
+              :
+              <div>awesome product</div>
+          }
+        </ul>
+        <div className={classes.buttonWrapper}>
+          <button className={classes.purchase}>purchase</button>
+          <button className={classes.learnMore}>learn more</button>
+        </div>
       </div>
-    </div>
+    </Grid >
   )
 }
 
 export default Package;
+

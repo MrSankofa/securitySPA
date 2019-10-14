@@ -2,7 +2,7 @@ var express = require('express');
 var morgan = require('morgan');
 var bodyParser = require('body-parser');
 var path = require('path');
-const reviewData = require('../data/data.js')
+const reviewData = require('../data/reviewData.js')
 var app = express();
 
 app.use(morgan('dev'));

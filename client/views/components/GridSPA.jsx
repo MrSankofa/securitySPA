@@ -65,8 +65,6 @@ const GridSPA = (props) => {
         backgroundColor: '#fefefe',
         padding: '5% 0%'
       },
-
-
     },
     item: {
       [theme.breakpoints.down('md')]: {
