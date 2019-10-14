@@ -36,7 +36,7 @@ Go to **localhost:3008**, Or you can open the HTML file if the bundle file has a
 <br/>
 
 ![](http://g.recordit.co/joRoCWNlF3.gif)
-![](http://g.recordit.co/Fc2YlVuxwj.gif)
+![](http://g.recordit.co/joRoCWNlF3.gif)
 
 ## Packages
 
@@ -47,7 +47,7 @@ Go to **localhost:3008**, Or you can open the HTML file if the bundle file has a
 <br/>
 
 ![](http://g.recordit.co/zu1ZgntPj8.gif)
-![](http://g.recordit.co/Fc2YlVuxwj.gif)
+![](http://g.recordit.co/zu1ZgntPj8.gif)
 
 ## Reviews
 * Reviews will only display on screens with resolution 1280px and above. At the time of creation, this company had no reviews so developers will need to update the get requests from the App.jsx componentDidMount function. 
