@@ -23,6 +23,8 @@ Go to **localhost:3008**, Or you can open the HTML file if the bundle file has a
 
 * The Header section has two different styles depending on the resolution of the screen. @ 960px and less the nav bar will change to a mobile view style. @ 960 px and above, the nav bar will disappear on scroll and reappear after a few seconds.
 
+<br/>
+
 ![](http://g.recordit.co/HpWS6rx81f.gif)
 
 
@@ -31,6 +33,8 @@ Go to **localhost:3008**, Or you can open the HTML file if the bundle file has a
 
 * @ 960 px and above the images will be styled on the left and the right. @ 960 px and below the styles will be stack more on top of each other.
 
+<br/>
+
 ![](http://g.recordit.co/joRoCWNlF3.gif)
 
 ## Packages
@@ -38,6 +42,8 @@ Go to **localhost:3008**, Or you can open the HTML file if the bundle file has a
 * Users can click on the different package types (4,6,8 cameras). Material-UI handles the grid. In App.jsx getDataRows will parse the number of packages into array rows of three. 
 * @ 960px and below the styles break into a 2x2 instead of a 3x3. 
 * @ 600 px all of the packages are stacked on top of each other. 
+
+<br/>
 
 ![](http://g.recordit.co/zu1ZgntPj8.gif)
 
