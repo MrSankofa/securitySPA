@@ -3,21 +3,6 @@ import _ from 'lodash';
 import injectSheet from 'react-jss'
 import { makeStyles } from '@material-ui/core/styles';
 
-/**
- * root: {
-      padding: theme.spacing(1),
-      [theme.breakpoints.down('sm')]: {
-        backgroundColor: 'red',
-      },
-      [theme.breakpoints.up('md')]: {
-        backgroundColor: 'blue',
-      },
-      [theme.breakpoints.up('lg')]: {
-        backgroundColor: 'green',
-      },
-    }
- */
-
 const Header = () => {
 
   const useStyles = makeStyles(theme => ({
@@ -118,7 +103,7 @@ const Header = () => {
         backgroundImage: 'url(./img/sourceImages/neighborhood.jpg)',
         backgroundRepeat: 'round',
         width: '100%',
-        height: '273px'
+        height: '355px'
       },
       [theme.breakpoints.between('md', 'xl')]: {
         height: '670px',
@@ -156,7 +141,10 @@ const Header = () => {
 
     },
     mainDescription: {
-      [theme.breakpoints.down('md')]: {
+      [theme.breakpoints.down('sm')]: {
+        display: 'none'
+      },
+      [theme.breakpoints.only('md')]: {
         color: '#b6bab9',
       },
       [theme.breakpoints.between('md', 'xl')]: {
@@ -170,14 +158,24 @@ const Header = () => {
     },
     buttonWrapper: {
       [theme.breakpoints.down('md')]: {
-        padding: '4%'
+        padding: '4%',
+        margin: '6%'
       },
       [theme.breakpoints.between('md', 'xl')]: {
         marginTop: '55px'
       },
     },
     contactUs: {
-      [theme.breakpoints.down('md')]: {
+      [theme.breakpoints.down('sm')]: {
+        backgroundColor: '#3498db',
+        color: 'white',
+        border: 'none',
+        borderStyle: 'groove',
+        width: '100px',
+        height: '31px',
+        margin: '3%'
+      },
+      [theme.breakpoints.only('md')]: {
         backgroundColor: '#3498db',
         color: 'white',
         border: 'none',
@@ -193,7 +191,15 @@ const Header = () => {
 
     },
     learnMore: {
-      [theme.breakpoints.down('md')]: {
+      [theme.breakpoints.down('sm')]: {
+        backgroundColor: 'white',
+        color: 'black',
+        border: 'none',
+        borderStyle: 'groove',
+        width: '100px',
+        height: '31px',
+      },
+      [theme.breakpoints.only('md')]: {
         backgroundColor: 'white',
         color: 'black',
         border: 'none',
@@ -216,7 +222,7 @@ const Header = () => {
         position: 'absolute',
         opacity: '0.5',
         width: '100%',
-        height: '273px',
+        height: '355px',
       },
       [theme.breakpoints.between('md', 'xl')]: {
         backgroundColor: 'black',

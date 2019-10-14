@@ -58,16 +58,31 @@ const Cards = ({ packages, getPackage, defaultPackage, getDataRows }) => {
 
     },
     packageButtons: {
-      [theme.breakpoints.down('lg')]: {
-        backgroundColor: '#fefefe',
-        width: '28%',
+      [theme.breakpoints.down('md')]: {
+        width: '79%',
         margin: '3% auto',
         '& button': {
           margin: '1%',
           width: '30%',
           padding: '2%',
           backgroundColor: '#fefefe',
-          border: 'none'
+          border: 'none',
+          borderStyle: 'outset',
+          fontWeight: 'bold'
+        }
+      },
+      [theme.breakpoints.only('lg')]: {
+        backgroundColor: '#fefefe',
+        width: '28%',
+        margin: '3% auto',
+        '& button': {
+          margin: '1%',
+          width: '31%',
+          padding: '2%',
+          backgroundColor: '#fefefe',
+          border: 'none',
+          fontWeight: 'bold',
+          borderStyle: 'groove'
         }
       },
       [theme.breakpoints.between('lg', 'xl')]: {
@@ -90,11 +105,11 @@ const Cards = ({ packages, getPackage, defaultPackage, getDataRows }) => {
     cardWrapper: {
       [theme.breakpoints.down('md')]: {
         margin: '0 auto 6%',
-        width: '60%'
+        width: '66%'
       },
       [theme.breakpoints.between('lg', 'xl')]: {
         margin: '0 auto 6%',
-        width: '60%'
+        width: '66%'
       },
 
     },

@@ -99,7 +99,7 @@ const Package = ({ packageType }) => {
     },
     buttonWrapper: {
       [theme.breakpoints.down('md')]: {
-        margin: '0 5% 3% 13%',
+        margin: '0 auto',
       },
       [theme.breakpoints.between('lg', 'xl')]: {
         width: '212px',
@@ -115,7 +115,7 @@ const Package = ({ packageType }) => {
   const classes = useStyles();
 
   return (
-    <Grid item md={4} >
+    <Grid item sm={6} md={4} >
       <div className={classes.package}>
         <img src={`${imageUrl}`} className={classes.packageImg} />
 
