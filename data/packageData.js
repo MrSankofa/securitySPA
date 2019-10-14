@@ -1,6 +1,5 @@
-// 4: 1,4,7,8,9
-// 6: 2
-// 8: 3,6
+// The data that was given had the incorrect images for some of the packages. 
+// The correct images for the number of cameras are below
 
 // 4 https://i.imgur.com/WJxyw7A.png
 // 6 https://i.imgur.com/adVz4bL.png

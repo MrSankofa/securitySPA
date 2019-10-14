@@ -1,9 +1,5 @@
 import React from 'react';
 
-const FeatureItem = ({ feature }) => {
-
-  return <li>{feature}</li>
-
-}
+const FeatureItem = ({ feature }) => (<li>{feature}</li>)
 
 export default FeatureItem

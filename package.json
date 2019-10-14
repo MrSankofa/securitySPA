@@ -7,6 +7,7 @@
     "start": "node server/index",
     "startDev": "nodemon server/index",
     "build": "webpack -d --watch",
+    "build:prod": "webpack -p",
     "liveServer": "live-server client/public/"
   },
   "keywords": [],

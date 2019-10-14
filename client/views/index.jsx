@@ -1,6 +1,5 @@
 import React from 'react';
 import { render } from 'react-dom';
-import SecuritySPA from './components/SecuritySPA.jsx';
 import App from './components/App.jsx'
 import { create } from 'jss';
 import { StylesProvider, jssPreset } from '@material-ui/styles';

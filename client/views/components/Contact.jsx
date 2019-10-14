@@ -1,8 +1,5 @@
 import React from 'react';
-import { Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
-import $ from 'jquery';
 import moment from 'moment-timezone';
 import axios from 'axios';
 import qs from 'qs';
@@ -103,6 +100,7 @@ const Contact = (props) => {
     const timeStamp = chicago.format();
     postReqData['timeSent'] = timeStamp;
 
+    // collect data from forms
     for (const o of document.forms) {
       for (const ele of o) {
 
@@ -110,25 +108,12 @@ const Contact = (props) => {
       }
     }
     console.log('postReqData: ', postReqData);
-    // axios({
-    //   method: 'post',
-    //   url: 'https://api.jjsecuritybros.com/contact',
-    //   data: qs.stringify(postReqData)
-    // })
-    //   .then(results => {
-    //     console.log('results: ', results);
-    //   })
-    //   .catch(err => {
-    //     console.error(err);
-    //     console.log('There was an error in making the post request');
-    //   })
     axios({
       method: 'post',
       url: 'https://webhook.site/121d06e3-90f0-4d87-9440-0850da8fe8c6/post',
       data: qs.stringify(postReqData)
     })
       .then(results => {
-        console.log('results from Contact form: ', results);
         if (results === 'success') {
           alert('contact form submitted')
         }
@@ -137,13 +122,6 @@ const Contact = (props) => {
         console.error(err);
         console.log('There was an error in making the post request');
       })
-    // axios({
-    //   method: 'get',
-    //   url: 'https://api.github.com/users/mrsankofa/repos'
-    // })
-    //   .then(results => {
-    //     console.log('results: ', results);
-    //   })
   }
 
 
@@ -176,7 +154,6 @@ const Contact = (props) => {
               <div>
                 <input type="text" placeholder="Phone Number" className={classes.field} name="phoneNumber" />
                 <input type="text" placeholder="Email" className={classes.field} name="email" />
-
               </div>
 
               <div>
@@ -185,33 +162,10 @@ const Contact = (props) => {
               <input type="submit" style={{ "display": "none" }} />
             </div>
           </form>
-
-
-
         </div>
-
       </div>
-
-
     </React.Fragment>
   )
 }
 
 export default Contact;
-
-// console.log('o: ', o);
-      // console.log('o type: ', typeof o);
-
-// console.log('ele: ', ele);
-        // console.log('ele name: ', ele.name);
-        // console.log('ele value: ', ele.value);
-
-// console.log('moment().format()', moment().format());
-    // console.log('currentTime: ', currentTime);
-    // console.log('currentTime: ', typeof currentTime);
-    // var jun = moment(currentTime);
-    // var dec = moment(currentTime);
-
-    // console.log(jun.tz('America/Chicago').format('ha z'));  // 5am PDT
-    // console.log(dec.tz('America/Chicago').format('ha z'));  // 4am PST
-    // console.log('chicago: ', chicago.format());

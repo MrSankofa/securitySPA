@@ -3,31 +3,24 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import FeatureItem from './FeatureItem.jsx';
 import Grid from '@material-ui/core/Grid';
-import { minHeight } from '@material-ui/system';
 
 
 const Package = ({ packageType }) => {
 
   const { name, description, imageUrl, features, packageCategory } = packageType;
 
-
   const useStyles = makeStyles(theme => ({
     package: {
       [theme.breakpoints.down('md')]: {
-
         backgroundColor: '#fefefe',
         margin: '3% auto',
         height: '600px'
       },
       [theme.breakpoints.between('md', 'xl')]: {
-
         backgroundColor: '#fefefe',
         display: 'inline-block',
-
         paddingBottom: '4%',
-
       },
-
 
     },
     purchase: {

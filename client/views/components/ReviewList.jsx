@@ -1,14 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Review from './Review.jsx';
-import Test from './Test.jsx'
-
-let screenWidth = window.outerWidth;
-let screenHeight = window.outerHeight;
-
 
 const ReviewList = (props) => {
-
 
   const useStyles = makeStyles(theme => ({
     reviewCarousel: {
@@ -192,5 +186,3 @@ const ReviewList = (props) => {
 }
 
 export default ReviewList;
-
-// https://api.yelp.com/v3/businesses/EYWJRJoD9QmmhIWmt7GOnQ/reviews

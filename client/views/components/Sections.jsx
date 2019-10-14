@@ -1,8 +1,7 @@
 import React from 'react';
-import { Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
-const Sections = (props) => {
+const Sections = () => {
   const useStyles = makeStyles(theme => ({
     sectionWrapper: {
       [theme.breakpoints.down('md')]: {
@@ -158,7 +157,7 @@ const Sections = (props) => {
   const classes = useStyles();
   return (
     <div >
-      <div className={classes.section1}>
+      <section className={classes.section1}>
         <div className={classes.sectionWrapper}>
 
           <div className={classes.contentLeft}>
@@ -169,8 +168,8 @@ const Sections = (props) => {
           </div>
           <div className={classes.contentImgRight} id="beachHouse"></div>
         </div>
-      </div>
-      <div className={classes.section2}>
+      </section>
+      <section className={classes.section2}>
         <div className={classes.sectionWrapper}>
           <div className={classes.contentImgLeft} id="sofa"></div>
           <div className={classes.contentRight}>
@@ -179,8 +178,8 @@ const Sections = (props) => {
             <p className={classes.featureSectionP}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua </p>
           </div>
         </div>
-      </div>
-      <div className={classes.section3}>
+      </section>
+      <section className={classes.section3}>
         <div className={classes.sectionWrapper}>
 
           <div className={classes.contentLeft}>
@@ -193,7 +192,7 @@ const Sections = (props) => {
           <div className={classes.contentImgRight} id="niceHouse"></div>
 
         </div>
-      </div>
+      </section>
     </div>
   )
 }
