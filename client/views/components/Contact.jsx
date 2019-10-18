@@ -88,6 +88,31 @@ const Contact = (props) => {
         marginTop: '10px'
       },
 
+    },
+    contactUs: {
+      [theme.breakpoints.down('sm')]: {
+        backgroundColor: '#3498db',
+        color: 'white',
+        border: 'none',
+        borderStyle: 'groove',
+        width: '100px',
+        height: '31px',
+        margin: '3%'
+      },
+      [theme.breakpoints.only('md')]: {
+        backgroundColor: '#3498db',
+        color: 'white',
+        border: 'none',
+      },
+      [theme.breakpoints.between('md', 'xl')]: {
+        backgroundColor: '#3498db',
+        color: 'white',
+        padding: '15px 65px',
+        border: 'none',
+        marginRight: '2%',
+        fontSize: '15px'
+      },
+
     }
   }));
   const classes = useStyles();
@@ -159,7 +184,7 @@ const Contact = (props) => {
               <div>
                 <textarea type="text" placeholder="Your Message" className={classes.textArea} name="message" />
               </div>
-              <input type="submit" style={{ "display": "none" }} />
+              <input type="submit" className={classes.contactUs} />
             </div>
           </form>
         </div>

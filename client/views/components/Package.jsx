@@ -132,6 +132,13 @@ const Package = ({ packageType }) => {
               <div>awesome product</div>
           }
         </ul>
+        <div className={classes.buttonWrapper}>
+        <a href="#ContactUs">
+          <button className={classes.purchase}>purchase</button>
+        </a>
+          <a href="#ContactUs" className={classes.contactUsLink}> <button className={classes.learnMore}>learn more</button></a>
+          
+        </div>
       </div>
     </Grid >
   )
