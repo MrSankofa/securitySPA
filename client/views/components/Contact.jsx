@@ -110,7 +110,7 @@ const Contact = (props) => {
     console.log('postReqData: ', postReqData);
     axios({
       method: 'post',
-      url: 'https://webhook.site/121d06e3-90f0-4d87-9440-0850da8fe8c6/post',
+      url: 'https://webhook.site/121d06e3-90f0-4d87-9440-0850da8fe8c6/contact',
       data: qs.stringify(postReqData)
     })
       .then(results => {

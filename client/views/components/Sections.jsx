@@ -53,10 +53,8 @@ const Sections = () => {
         paddingTop: '2%'
       },
       [theme.breakpoints.between('md', 'xl')]: {
-        marginTop: '18%',
-        marginLeft: '10%',
         width: '50%',
-        padding: '0% 7%'
+        padding: '5% 4% 0% 2%'
       },
 
     },
@@ -81,11 +79,11 @@ const Sections = () => {
     },
     contentRight: {
       [theme.breakpoints.down('md')]: {
-        padding: '0% 5%'
+        padding: '2% 0% 1% 3%'
       },
       [theme.breakpoints.between('md', 'xl')]: {
-        marginTop: '18%',
-        marginLeft: '10%',
+        marginTop: '9%',
+        marginLeft: '4%',
         width: '50%',
         padding: '0% 7%'
       },
@@ -96,7 +94,7 @@ const Sections = () => {
         width: '100px',
         height: '100px',
         float: 'right',
-        marginTop: '29%',
+        marginTop: '2%',
         background: 'no-repeat center/102%',
         borderRadius: '0% 21% 5% 0%'
       },
@@ -117,13 +115,12 @@ const Sections = () => {
       [theme.breakpoints.down('md')]: {
         color: '#3390e9',
         fontWeight: 'bold',
-        fontSize: '16px',
-        padding: '8% 0',
+        fontSize: '18px',
       },
       [theme.breakpoints.between('md', 'xl')]: {
         color: '#3390e9',
         fontWeight: 'bold',
-        fontSize: '18px'
+        fontSize: '25px'
       },
 
     },
@@ -141,13 +138,11 @@ const Sections = () => {
     },
     featureSectionP: {
       [theme.breakpoints.down('md')]: {
-        fontSize: '144%',
-        color: '#cacacf',
-        padding: '5%'
+        fontSize: '102%',
+        padding: '0%'
       },
       [theme.breakpoints.between('md', 'xl')]: {
         fontSize: '144%',
-        color: '#cacacf',
         lineHeight: '135%'
       },
 
@@ -162,9 +157,8 @@ const Sections = () => {
 
           <div className={classes.contentLeft}>
 
-            <div className={classes.featureSectionText}>Featured Section - 1 </div>
-            <h1 className={classes.featureSectionH1}>Some details about your service <br></br> times and reviews. </h1>
-            <p className={classes.featureSectionP}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor <br></br> incididunt ut labore et dolore magna aliqua </p>
+            <div className={classes.featureSectionText}>About Us </div>
+            <p className={classes.featureSectionP}>My name is Jonathan Bendt. I am a co-owner and founder of J&J Security Brothers with my partner Jose Gonzalez. <br></br> <br></br> Our goal is to provide our customers with the best quality of work and products. </p>
           </div>
           <div className={classes.contentImgRight} id="beachHouse"></div>
         </div>
@@ -173,9 +167,8 @@ const Sections = () => {
         <div className={classes.sectionWrapper}>
           <div className={classes.contentImgLeft} id="sofa"></div>
           <div className={classes.contentRight}>
-            <div className={classes.featureSectionText}>Featured Section - 2 </div>
-            <h1 className={classes.featureSectionH1}>Some details about your service times and reviews. </h1>
-            <p className={classes.featureSectionP}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua </p>
+            <div className={classes.featureSectionText}>About Us </div>
+            <p className={classes.featureSectionP}>I have experienced first hand the effects of being burglarized and know how it feels to be violated in that way.<br></br><br></br> Our number one goal is to provide our customers with the best in security products and installations. </p>
           </div>
         </div>
       </section>
@@ -184,9 +177,8 @@ const Sections = () => {
 
           <div className={classes.contentLeft}>
 
-            <div className={classes.featureSectionText}>Featured Section - 3 </div>
-            <h1 className={classes.featureSectionH1}>Some details about your service <br></br> times and reviews. </h1>
-            <p className={classes.featureSectionP}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua </p>
+            <div className={classes.featureSectionText}>About Us</div>
+            <p className={classes.featureSectionP}>Hello, my name is Jose Gonzalez, I am a Co-Owner and Founder of J&J Security Brothers with my partner Jonathon. <br></br><br></br>We are family owned and operated and understand the need to protect what matters most to you and your family. <br></br><br></br>Every customer, whether you’re new or existing, our goal is to make sure you have the utmost satisfaction with the job we have performed. <br></br><br></br>No job is to small or to big, we are here to ensure you are treated like our family. I look forward to meeting with you to create a security system that directly and effectively matches your needs.</p>
           </div>
 
           <div className={classes.contentImgRight} id="niceHouse"></div>
