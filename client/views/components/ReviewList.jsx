@@ -145,7 +145,7 @@ const ReviewList = (props) => {
   };
 
   return (
-    <div className={classes.reviewCarousel}>
+    <div className={classes.reviewCarousel} id="reviews">
       <h1> What do our clients say about us?</h1>
       <div className={classes.reviewWrapper} style={{
         transform: `translateX(${translateValue}px)`,

@@ -1,6 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 import { makeStyles } from '@material-ui/core/styles';
+import $ from 'jquery'
 
 const Header = () => {
 
@@ -260,6 +261,11 @@ const Header = () => {
       display: 'block',
       height: '40px',
       width: '13%'
+    },
+    contactUsLink: {
+      margin: 0,
+      padding: 0,
+      textDecoration: 'none'
     }
 
   }));
@@ -322,11 +328,11 @@ const Header = () => {
             <a className={classes.burgerNav} onClick={openMenu}></a>
           </div>
           <ul className={classes.ul}>
-            <li className={classes.li}><a href="#" >home</a></li>
-            <li className={classes.li}><a href="#">about us</a></li>
-            <li className={classes.li}><a href="#">packages</a></li>
-            <li className={classes.li}><a href="#">reviews</a></li>
-            <li className={classes.li}><a href="#" className={classes.current}>contact us</a></li>
+            <li className={classes.li}><a href="#home" >home</a></li>
+            <li className={classes.li}><a href="#AboutUs">about us</a></li>
+            <li className={classes.li}><a href="#packages">packages</a></li>
+            <li className={classes.li}><a href="#reviews">reviews</a></li>
+            <li className={classes.li}><a href="#ContactUs" className={classes.current}>contact us</a></li>
           </ul>
         </nav>
 
@@ -334,14 +340,14 @@ const Header = () => {
 
       <div className={classes.whiteBkg}>
 
-        <div className={classes.header}>
+        <div className={classes.header} id="home">
           <div className={classes.overlay}></div>
           <div className={classes.headerContent}>
             <h1 className={classes.mainTitle}>Home Security you can <br></br> fully trust.</h1>
             <p className={classes.mainDescription}>It is our goal to deliver an efficient, effective, and high-quality security solutions while providing the best level of customer service for our clients. We strive to deliver peace of mind to each and every customer using the highest quality equipment and professionalism. We will work hard to provide what is the best option for each customer. From security systems to video surveillance, we have you covered by educating ourselves and using the latest technology and products to protect not only your home but what's most important, you and your loved ones.</p>
             <div className={classes.buttonWrapper}>
-              <button className={classes.contactUs}> Contact Us</button>
-              <button className={classes.learnMore}> Learn More</button>
+              <a href="#ContactUs" className={classes.contactUsLink}> <button className={classes.contactUs}> Contact Us</button> </a>
+              <a href="#ContactUs" className={classes.contactUsLink}> <button className={classes.learnMore}> Learn More</button> </a>
             </div>
 
           </div>

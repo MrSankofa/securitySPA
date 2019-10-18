@@ -33,7 +33,7 @@ const Review = props => {
   const classes = useStyles();
 
   return (
-    <div className={classes.review}>
+    <div className={classes.review} >
       <p className={classes.text}>{props.review.text}</p>
     </div>
   )
