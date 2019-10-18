@@ -90,7 +90,7 @@ const Cards = ({ packages, getPackage, defaultPackage, getDataRows }) => {
   const classes = useStyles();
 
   return (
-    <div className={classes.cardSection}>
+    <div className={classes.cardSection} id="packages">
       <h1 className={classes.packageSectionTitle}>Find the right package for <span>your <br></br>home.</span> </h1>
 
       <div className={classes.packageButtons}>

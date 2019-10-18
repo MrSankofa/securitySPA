@@ -42,14 +42,13 @@ const Package = ({ packageType }) => {
       [theme.breakpoints.down('md')]: {
         borderColor: 'darkslategrey',
         width: '100px',
-        height: '34px',
-        marginLeft: '10px'
+        height: '34px'
       },
       [theme.breakpoints.between('lg', 'xl')]: {
         borderColor: 'darkslategrey',
         width: '100px',
         height: '34px',
-        marginLeft: '10px'
+        
       },
 
     },
@@ -102,6 +101,11 @@ const Package = ({ packageType }) => {
     },
     packageImg: {
       width: '89%'
+    },
+    contactUsLink: {
+      margin: 0,
+      padding: 0,
+      textDecoration: 'none'
     }
   }));
 
@@ -129,8 +133,11 @@ const Package = ({ packageType }) => {
           }
         </ul>
         <div className={classes.buttonWrapper}>
+        <a href="#loginScreen">
           <button className={classes.purchase}>purchase</button>
-          <button className={classes.learnMore}>learn more</button>
+        </a>
+          <a href="#ContactUs" className={classes.contactUsLink}> <button className={classes.learnMore}>learn more</button></a>
+          
         </div>
       </div>
     </Grid >

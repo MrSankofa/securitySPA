@@ -152,7 +152,7 @@ const Sections = () => {
   const classes = useStyles();
   return (
     <div >
-      <section className={classes.section1}>
+      <section className={classes.section1} id="AboutUs">
         <div className={classes.sectionWrapper}>
 
           <div className={classes.contentLeft}>

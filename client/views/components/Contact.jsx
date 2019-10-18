@@ -131,7 +131,7 @@ const Contact = (props) => {
   return (
     <React.Fragment>
 
-      <div className={classes.contactWrapper}>
+      <div className={classes.contactWrapper} id="ContactUs">
 
         <div className={classes.overlay}>
 
