@@ -29,6 +29,7 @@
     "moment": "^2.24.0",
     "moment-timezone": "^0.5.26",
     "morgan": "^1.9.1",
+    "nodemon": "^1.19.4",
     "qs": "^6.9.0",
     "react-jss": "^10.0.0"
   },
