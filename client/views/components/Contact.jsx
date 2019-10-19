@@ -153,6 +153,7 @@ const Contact = (props) => {
 
 
 
+
   return (
     <React.Fragment>
 
@@ -182,7 +183,7 @@ const Contact = (props) => {
               </div>
 
               <div>
-                <textarea type="text" placeholder="Your Message" className={classes.textArea} name="message" />
+                <textarea type="text" placeholder="Your Message" className={classes.textArea} name="message" id="message" />
               </div>
               <input type="submit" className={classes.contactUs} />
             </div>

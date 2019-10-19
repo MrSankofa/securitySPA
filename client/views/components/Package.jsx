@@ -111,6 +111,25 @@ const Package = ({ packageType }) => {
 
   const classes = useStyles();
 
+  const getPackage = (e) => {
+    console.log('package type: ', packageType)
+    const message = `I would like to learn more about the ${name} package. Please send me a quote.`
+
+    // sendToContactForm(message);
+    if( document.getElementById('message') !== null) {
+      console.log('document.getElementById(\'message\')',document.getElementById('message'));
+      document.getElementById('message').value = `Hi,
+
+${message} 
+
+please contact me at my email or phone number above. 
+
+Thank you!
+      `
+    }
+
+  }
+
   return (
     <Grid item sm={6} md={4} >
       <div className={classes.package}>
@@ -134,7 +153,7 @@ const Package = ({ packageType }) => {
         </ul>
         <div className={classes.buttonWrapper}>
         <a href="#ContactUs">
-          <button className={classes.purchase}>purchase</button>
+          <button className={classes.purchase} onClick={getPackage}>purchase</button>
         </a>
           <a href="#ContactUs" className={classes.contactUsLink}> <button className={classes.learnMore}>learn more</button></a>
           
