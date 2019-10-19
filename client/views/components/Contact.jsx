@@ -185,7 +185,7 @@ const Contact = (props) => {
               <div>
                 <textarea type="text" placeholder="Your Message" className={classes.textArea} name="message" id="message" />
               </div>
-              <input type="submit" className={classes.contactUs} />
+              <input type="submit" className={classes.contactUs} onClick={submitForm}/>
             </div>
           </form>
         </div>
