@@ -44,6 +44,10 @@ export default class App extends Component {
 
   }
 
+  sendToContactForm(message){
+    
+  }
+
 
   componentDidMount() {
     // once business has Yelp reviews change get request to: https://api.yelp.com/v3/businesses/xAG4O7l-t1ubbwVAlPnDKg/reviews
