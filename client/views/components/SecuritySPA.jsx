@@ -21,7 +21,7 @@ const SecuritySPA = ({ reviews, slides, packages, getPackage, defaultPackage, ge
             <Sections />
             <Card packages={packages} getPackage={getPackage} defaultPackage={defaultPackage} getDataRows={getDataRows} />
             {
-                slides !== 0 ? (<ReviewList reviews={reviews} slides={slides} />) : <div>No Reviews</div>
+                slides !== 0 ? (<ReviewList reviews={reviews} slides={slides} />) : <div stlye={{display:"none"}}></div>
             }
             <Contact />
         </div>
